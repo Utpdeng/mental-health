@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园心理健康服务中心</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+		body {
+			font-family: "Microsoft YaHei", sans-serif;
+			line-height: 1.6;
+			padding-top: 64px; /* 添加这一行，值应该等于导航栏的高度 */
+		}
+
+        /* 导航栏样式 */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* 轮播图样式 */
+        .slider {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 主要内容区域样式 */
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        /* 页脚样式 */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">校园心理健康服务中心</div>
+            <div class="nav-links">
+                <a href="#home">首页</a>
+                <a href="#services">服务项目</a>
+                <a href="#about">关于我们</a>
+                <a href="#contact">联系咨询</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div class="slider">
+        <div class="slide active">
+            <img src="./img/1.jpg" alt="心理健康1">
+        </div>
+        <div class="slide">
+            <img src="./img/2.jpg" alt="心理健康2">
+        </div>
+        <div class="slide">
+            <img src="./img/3.jpg" alt="心理健康3">
+        </div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <h2>我们的服务</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>个人心理咨询</h3>
+                <p>提供专业的一对一心理咨询服务，帮助学生解决学习、生活、情感等方面的困扰。</p>
+            </div>
+            <div class="service-card">
+                <h3>团体心理辅导</h3>
+                <p>开展团体心理活动，促进交流与成长，提升心理健康水平。</p>
+            </div>
+            <div class="service-card">
+                <h3>心理测评</h3>
+                <p>提供专业的心理测评工具，帮助了解自己的心理状态。</p>
+            </div>
+            <div class="service-card">
+                <h3>心理健康教育</h3>
+                <p>定期举办心理健康讲座和工作坊，普及心理健康知识。</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>校园心理健康服务中心 © 2024</p>
+            <p>联系电话：110</p>
+            <p>地址：地球</p>
+        </div>
+    </footer>
+
+    <script>
+        // 轮播图功能
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // 自动轮播
+        setInterval(nextSlide, 3000);
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(44, 62, 80, 0.9)';
+            } else {
+                navbar.style.background = '#2c3e50';
+            }
+        });
+    </script>
+</body>
+</html>

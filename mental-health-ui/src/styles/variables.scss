@@ -1,0 +1,44 @@
+// 主题颜色
+$primary-color: #409EFF;
+$secondary-color: #67C23A;
+$success-color: #67C23A;
+$warning-color: #E6A23C;
+$danger-color: #F56C6C;
+$info-color: #909399;
+
+// 扩展颜色（使用具体的颜色值替代 lighten 函数）
+$primary-color-light: #a0cfff;
+$secondary-color-light: #b3e19d;
+$success-color-light: #b3e19d;
+$warning-color-light: #f3d19e;
+$danger-color-light: #fbc4c4;
+$info-color-light: #c8c9cc;
+
+// 灰度颜色
+$white: #FFFFFF;
+$gray-100: #F8F9FA;
+$gray-200: #E9ECEF;
+$gray-300: #DEE2E6;
+$gray-400: #CED4DA;
+$gray-500: #ADB5BD;
+$gray-600: #6C757D;
+$gray-700: #495057;
+$gray-800: #343A40;
+$gray-900: #212529;
+$black: #000000;
+
+// 布局尺寸
+$header-height: 60px;
+$container-max-width: 1200px;
+
+// 断点
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  '2xl': 1536px
+);
+
+// 字体
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; 

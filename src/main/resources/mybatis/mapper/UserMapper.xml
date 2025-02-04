@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dil.user.mapper.UserMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dil.user.entity.User">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="email" property="email"/>
+        <result column="phone" property="phone"/>
+        <result column="role" property="role"/>
+        <result column="status" property="status"/>
+        <result column="created_at" property="created_at"/>
+        <result column="updated_at" property="updated_at"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, username, password, email, phone, role, status, created_at, updated_at
+    </sql>
+
+    <insert id="insertUser" parameterType="com.dil.user.entity.User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO users (
+            username, password, email, role, status, created_at, updated_at
+        ) VALUES (
+            #{username}, #{password}, #{email}, #{role}, #{status}, NOW(), NOW()
+        )
+    </insert>
+
+    <select id="findByUsername" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM users
+        WHERE username = #{username}
+    </select>
+
+    <select id="findByEmail" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM users
+        WHERE email = #{email}
+    </select>
+
+    <select id="findByUsernameAndPassword" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM users
+        WHERE username = #{username} AND password = #{password} LIMIT 1
+    </select>
+
+    <select id="getUserInfoById" resultType="com.dil.user.dto.UserInfoResponse">
+        SELECT
+            u.id AS userId,
+            u.username,
+            u.email,
+            u.role,
+            u.status,
+            up.avatar_url AS avatarUrl,
+            u.created_at,
+            up.nickname,
+            up.bio,
+            up.gender,
+            up.birthdate,
+            up.location,
+            up.preferences
+        FROM
+            users u
+                LEFT JOIN
+            user_profiles up ON u.id = up.user_id
+        WHERE
+            u.id = #{userId}
+    </select>
+
+    <select id="findUsersByRole" resultType="com.dil.user.dto.UserInfoResponse">
+        SELECT
+            u.id AS userId,
+            u.username,
+            u.email,
+            u.role,
+            up.avatar_url AS avatarUrl,
+            u.created_at,
+            up.nickname,
+            up.bio,
+            up.gender,
+            up.birthdate,
+            up.location,
+            up.preferences,
+            u.status
+        FROM
+            users u
+                LEFT JOIN
+            user_profiles up ON u.id = up.user_id
+        WHERE
+            (#{role} IS NULL OR u.role = #{role})
+    </select>
+</mapper>

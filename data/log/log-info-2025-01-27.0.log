@@ -1,0 +1,814 @@
+25-01-27.10:47:10.887 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 4900 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-01-27.10:47:10.890 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-01-27.10:47:10.890 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-01-27.10:47:11.448 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-01-27.10:47:11.462 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+25-01-27.10:47:11.853 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-01-27.10:47:11.854 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-01-27.10:47:11.854 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-27.10:47:11.854 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-27.10:47:11.868 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-01-27.10:47:11.877 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-01-27.10:47:11.878 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-27.10:47:11.878 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-27.10:47:12.045 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-27.10:47:12.045 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1103 ms
+25-01-27.10:47:12.521 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@47df5041]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-01-27.10:47:12.525 [cluster-rtt-ClusterId{value='6796f3b0da8a0c1b77134180', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
+25-01-27.10:47:12.525 [cluster-ClusterId{value='6796f3b0da8a0c1b77134180', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+25-01-27.10:47:12.525 [cluster-ClusterId{value='6796f3b0da8a0c1b77134180', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=19289400}
+25-01-27.10:47:13.091 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-01-27.10:47:13.107 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-01-27.10:47:13.115 [main            ] INFO  App                    - Started App in 2.693 seconds (JVM running for 4.409)
+25-01-27.10:58:15.319 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-27.10:58:15.319 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-27.10:58:15.320 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-27.10:58:15.388 [http-nio-8090-exec-1] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.10:58:15.393 [http-nio-8090-exec-1] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.10:58:15.408 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-27.10:58:16.382 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-27.10:58:16.462 [http-nio-8090-exec-1] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.10:58:16.504 [http-nio-8090-exec-2] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.10:58:16.510 [http-nio-8090-exec-2] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.10:58:18.518 [http-nio-8090-exec-3] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.10:58:18.521 [http-nio-8090-exec-3] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.10:58:21.177 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.10:58:21.179 [http-nio-8090-exec-6] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.10:58:40.037 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.10:58:40.037 [http-nio-8090-exec-7] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.10:58:42.704 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.10:58:42.704 [http-nio-8090-exec-5] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:01:38.728 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:01:38.728 [http-nio-8090-exec-8] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:01:43.308 [http-nio-8090-exec-4] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.11:01:43.308 [http-nio-8090-exec-4] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.11:01:44.058 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:01:44.058 [http-nio-8090-exec-9] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:01:46.418 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:01:46.418 [http-nio-8090-exec-10] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:01:47.376 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:01:47.376 [http-nio-8090-exec-1] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:02:23.568 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:02:23.569 [http-nio-8090-exec-2] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:07:25.591 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-27.11:07:25.600 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-27.11:07:32.271 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 13988 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-01-27.11:07:32.273 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-01-27.11:07:32.274 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-01-27.11:07:32.715 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-01-27.11:07:32.728 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+25-01-27.11:07:33.080 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-01-27.11:07:33.080 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-01-27.11:07:33.080 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-27.11:07:33.080 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-27.11:07:33.083 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-01-27.11:07:33.089 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-01-27.11:07:33.089 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-27.11:07:33.089 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-27.11:07:33.220 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-27.11:07:33.220 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 901 ms
+25-01-27.11:07:33.592 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@7d1c164a]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-01-27.11:07:33.598 [cluster-ClusterId{value='6796f875957d5427e24d2434', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:3}] to localhost:27017
+25-01-27.11:07:33.598 [cluster-rtt-ClusterId{value='6796f875957d5427e24d2434', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:4}] to localhost:27017
+25-01-27.11:07:33.598 [cluster-ClusterId{value='6796f875957d5427e24d2434', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=16182200}
+25-01-27.11:07:34.075 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-01-27.11:07:34.088 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-01-27.11:07:34.095 [main            ] INFO  App                    - Started App in 2.203 seconds (JVM running for 3.435)
+25-01-27.11:07:40.239 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-27.11:07:40.239 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-27.11:07:40.240 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-27.11:07:41.005 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:07:41.010 [http-nio-8090-exec-1] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:07:41.035 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-27.11:07:41.242 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-27.11:07:57.635 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:07:57.635 [http-nio-8090-exec-2] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:07:58.923 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:07:58.924 [http-nio-8090-exec-3] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:07:59.597 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:07:59.597 [http-nio-8090-exec-4] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:08:20.794 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:08:20.794 [http-nio-8090-exec-7] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:08:21.055 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:08:21.056 [http-nio-8090-exec-6] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:08:23.305 [http-nio-8090-exec-5] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.11:08:23.308 [http-nio-8090-exec-5] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.11:08:27.860 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:08:27.860 [http-nio-8090-exec-8] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:09:08.921 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-27.11:09:08.930 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-27.11:09:15.315 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 14824 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-01-27.11:09:15.317 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-01-27.11:09:15.317 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-01-27.11:09:15.751 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-01-27.11:09:15.764 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+25-01-27.11:09:16.105 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-01-27.11:09:16.106 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-01-27.11:09:16.106 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-27.11:09:16.106 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-27.11:09:16.108 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-01-27.11:09:16.114 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-01-27.11:09:16.114 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-27.11:09:16.114 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-27.11:09:16.234 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-27.11:09:16.234 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 873 ms
+25-01-27.11:09:16.590 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@5db948c9]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-01-27.11:09:16.597 [cluster-ClusterId{value='6796f8dc53ad50448e5aa6a6', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:5}] to localhost:27017
+25-01-27.11:09:16.597 [cluster-rtt-ClusterId{value='6796f8dc53ad50448e5aa6a6', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:6}] to localhost:27017
+25-01-27.11:09:16.597 [cluster-ClusterId{value='6796f8dc53ad50448e5aa6a6', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=16967800}
+25-01-27.11:09:17.096 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-01-27.11:09:17.110 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-01-27.11:09:17.117 [main            ] INFO  App                    - Started App in 2.173 seconds (JVM running for 3.362)
+25-01-27.11:09:25.627 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-27.11:09:25.628 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-27.11:09:25.628 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-01-27.11:09:26.382 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:09:26.386 [http-nio-8090-exec-1] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:09:26.410 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-27.11:09:26.617 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-27.11:09:36.043 [http-nio-8090-exec-2] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.11:09:36.046 [http-nio-8090-exec-2] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.11:09:50.452 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:09:50.452 [http-nio-8090-exec-3] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:09:56.559 [http-nio-8090-exec-4] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.11:09:56.559 [http-nio-8090-exec-4] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.11:09:59.369 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:09:59.369 [http-nio-8090-exec-7] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:10:34.733 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:10:34.733 [http-nio-8090-exec-6] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:10:36.705 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:10:36.706 [http-nio-8090-exec-9] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:10:46.251 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:10:46.251 [http-nio-8090-exec-8] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:11:40.421 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:11:40.421 [http-nio-8090-exec-5] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:11:43.775 [http-nio-8090-exec-10] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.11:11:43.775 [http-nio-8090-exec-10] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.11:12:24.307 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-27.11:12:24.315 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-27.11:12:27.094 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 2604 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-01-27.11:12:27.096 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-01-27.11:12:27.096 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-01-27.11:12:27.534 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-01-27.11:12:27.547 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+25-01-27.11:12:27.898 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-01-27.11:12:27.898 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-01-27.11:12:27.898 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-27.11:12:27.898 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-27.11:12:27.901 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-01-27.11:12:27.907 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-01-27.11:12:27.908 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-27.11:12:27.908 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-27.11:12:28.042 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-27.11:12:28.042 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 903 ms
+25-01-27.11:12:28.415 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@6f930e0]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-01-27.11:12:28.423 [cluster-rtt-ClusterId{value='6796f99c50f6d91fb7607dcd', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:7}] to localhost:27017
+25-01-27.11:12:28.423 [cluster-ClusterId{value='6796f99c50f6d91fb7607dcd', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:8}] to localhost:27017
+25-01-27.11:12:28.423 [cluster-ClusterId{value='6796f99c50f6d91fb7607dcd', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=16667900}
+25-01-27.11:12:28.916 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-01-27.11:12:28.930 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-01-27.11:12:28.937 [main            ] INFO  App                    - Started App in 2.223 seconds (JVM running for 3.417)
+25-01-27.11:12:37.882 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-27.11:12:37.882 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-27.11:12:37.882 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-01-27.11:12:38.635 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:12:38.640 [http-nio-8090-exec-1] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:12:38.663 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-27.11:12:38.867 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-27.11:13:17.882 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:13:17.882 [http-nio-8090-exec-2] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:13:20.893 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:13:20.894 [http-nio-8090-exec-3] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:13:45.626 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:13:45.626 [http-nio-8090-exec-4] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:13:48.221 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:13:48.221 [http-nio-8090-exec-5] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:13:58.509 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:13:58.509 [http-nio-8090-exec-6] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:14:42.389 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:14:42.389 [http-nio-8090-exec-7] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:15:13.651 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:15:13.651 [http-nio-8090-exec-8] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:15:16.556 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:15:16.556 [http-nio-8090-exec-9] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:16:25.486 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:16:25.486 [http-nio-8090-exec-10] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:16:27.704 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:16:27.705 [http-nio-8090-exec-1] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:17:00.019 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:17:00.019 [http-nio-8090-exec-2] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:17:04.941 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:17:04.942 [http-nio-8090-exec-3] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:18:20.924 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:18:20.925 [http-nio-8090-exec-4] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:21:30.040 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-27.11:21:30.049 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-27.11:21:36.375 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 4996 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-01-27.11:21:36.377 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-01-27.11:21:36.377 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-01-27.11:21:36.794 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-01-27.11:21:36.807 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+25-01-27.11:21:37.142 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-01-27.11:21:37.143 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-01-27.11:21:37.143 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-27.11:21:37.143 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-27.11:21:37.145 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-01-27.11:21:37.150 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-01-27.11:21:37.151 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-27.11:21:37.151 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-27.11:21:37.271 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-27.11:21:37.271 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 852 ms
+25-01-27.11:21:37.619 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@60bf494c]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-01-27.11:21:37.625 [cluster-ClusterId{value='6796fbc1b4b728463d26584e', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:10}] to localhost:27017
+25-01-27.11:21:37.625 [cluster-rtt-ClusterId{value='6796fbc1b4b728463d26584e', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:9}] to localhost:27017
+25-01-27.11:21:37.625 [cluster-ClusterId{value='6796fbc1b4b728463d26584e', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15119900}
+25-01-27.11:21:38.129 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-01-27.11:21:38.144 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-01-27.11:21:38.152 [main            ] INFO  App                    - Started App in 2.141 seconds (JVM running for 3.321)
+25-01-27.11:21:52.832 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-27.11:21:52.832 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-27.11:21:52.833 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-27.11:21:53.581 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:21:53.586 [http-nio-8090-exec-1] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:21:53.609 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-27.11:21:53.818 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-27.11:21:56.506 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:21:56.507 [http-nio-8090-exec-3] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:22:42.827 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-27.11:22:42.831 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-27.11:22:49.261 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 12372 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-01-27.11:22:49.262 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-01-27.11:22:49.263 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-01-27.11:22:49.692 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-01-27.11:22:49.706 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+25-01-27.11:22:50.048 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-01-27.11:22:50.049 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-01-27.11:22:50.049 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-27.11:22:50.049 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-27.11:22:50.051 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-01-27.11:22:50.057 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-01-27.11:22:50.058 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-27.11:22:50.058 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-27.11:22:50.181 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-27.11:22:50.181 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 875 ms
+25-01-27.11:22:50.543 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@296edc75]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-01-27.11:22:50.551 [cluster-rtt-ClusterId{value='6796fc0ad9ccf80cd3a745c5', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:11}] to localhost:27017
+25-01-27.11:22:50.551 [cluster-ClusterId{value='6796fc0ad9ccf80cd3a745c5', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:12}] to localhost:27017
+25-01-27.11:22:50.551 [cluster-ClusterId{value='6796fc0ad9ccf80cd3a745c5', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=17062800}
+25-01-27.11:22:51.031 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-01-27.11:22:51.045 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-01-27.11:22:51.052 [main            ] INFO  App                    - Started App in 2.209 seconds (JVM running for 3.407)
+25-01-27.11:22:59.544 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-27.11:22:59.545 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-27.11:22:59.545 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-01-27.11:23:00.304 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:00.309 [http-nio-8090-exec-1] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:00.332 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-27.11:23:00.539 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-27.11:23:14.823 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:14.823 [http-nio-8090-exec-2] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:34.707 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:34.707 [http-nio-8090-exec-3] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:35.009 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:35.009 [http-nio-8090-exec-4] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:35.021 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:35.021 [http-nio-8090-exec-6] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:35.030 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:35.030 [http-nio-8090-exec-5] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:35.038 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:35.038 [http-nio-8090-exec-7] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:36.307 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:23:36.307 [http-nio-8090-exec-9] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:24:04.851 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:24:04.851 [http-nio-8090-exec-10] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:25:33.277 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:25:33.277 [http-nio-8090-exec-8] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:26:02.019 [http-nio-8090-exec-1] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.11:26:02.025 [http-nio-8090-exec-1] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.11:26:04.836 [http-nio-8090-exec-2] INFO  AppointmentController  - 修改预约状态，预约ID：1, 预约状态 confirmed
+25-01-27.11:26:04.836 [http-nio-8090-exec-2] INFO  AppointmentService     - 修改预约状态：1
+25-01-27.11:26:05.217 [http-nio-8090-exec-3] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.11:26:05.218 [http-nio-8090-exec-3] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.11:26:07.344 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:26:07.345 [http-nio-8090-exec-4] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:27:03.805 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:27:03.805 [http-nio-8090-exec-6] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:27:08.960 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:27:08.960 [http-nio-8090-exec-5] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:28:21.213 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:28:21.213 [http-nio-8090-exec-7] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:28:25.989 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:28:25.989 [http-nio-8090-exec-9] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.11:30:55.717 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-27.11:30:55.744 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-27.16:37:35.970 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 1540 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-01-27.16:37:35.973 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-01-27.16:37:35.974 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-01-27.16:37:36.553 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-01-27.16:37:36.570 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 MongoDB repository interfaces.
+25-01-27.16:37:36.989 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-01-27.16:37:36.990 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-01-27.16:37:36.990 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-27.16:37:36.990 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-27.16:37:37.003 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-01-27.16:37:37.010 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-01-27.16:37:37.011 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-27.16:37:37.011 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-27.16:37:37.176 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-27.16:37:37.176 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1144 ms
+25-01-27.16:37:37.646 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@2f054f70]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-01-27.16:37:37.654 [cluster-rtt-ClusterId{value='679745d1c0dffc4647b4f308', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:2}] to localhost:27017
+25-01-27.16:37:37.654 [cluster-ClusterId{value='679745d1c0dffc4647b4f308', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:1}] to localhost:27017
+25-01-27.16:37:37.654 [cluster-ClusterId{value='679745d1c0dffc4647b4f308', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=19817800}
+25-01-27.16:37:38.219 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-01-27.16:37:38.234 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-01-27.16:37:38.242 [main            ] INFO  App                    - Started App in 2.782 seconds (JVM running for 4.687)
+25-01-27.16:38:14.462 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-27.16:38:14.462 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-27.16:38:14.463 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-27.16:38:15.275 [http-nio-8090-exec-1] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.16:38:15.281 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-27.16:38:15.556 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-27.16:38:15.564 [http-nio-8090-exec-1] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.16:38:33.392 [http-nio-8090-exec-2] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.16:38:33.392 [http-nio-8090-exec-2] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.16:38:33.403 [http-nio-8090-exec-2] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.16:38:33.638 [http-nio-8090-exec-4] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.16:38:33.639 [http-nio-8090-exec-4] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.16:38:37.792 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.16:38:37.794 [http-nio-8090-exec-3] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.16:39:07.226 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.16:39:07.227 [http-nio-8090-exec-7] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.16:39:12.845 [http-nio-8090-exec-6] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.16:39:12.847 [http-nio-8090-exec-6] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.16:39:16.951 [http-nio-8090-exec-5] INFO  AppointmentController  - 收到查询预约详情请求，预约ID：2
+25-01-27.16:39:16.951 [http-nio-8090-exec-5] INFO  AppointmentService     - 查询预约详情，预约ID：2
+25-01-27.16:39:19.787 [http-nio-8090-exec-8] INFO  AppointmentController  - 收到查询预约详情请求，预约ID：1
+25-01-27.16:39:19.787 [http-nio-8090-exec-8] INFO  AppointmentService     - 查询预约详情，预约ID：1
+25-01-27.16:39:22.831 [http-nio-8090-exec-9] INFO  AppointmentController  - 收到查询预约详情请求，预约ID：1
+25-01-27.16:39:22.831 [http-nio-8090-exec-9] INFO  AppointmentService     - 查询预约详情，预约ID：1
+25-01-27.16:39:25.807 [http-nio-8090-exec-10] INFO  AppointmentController  - 收到查询预约详情请求，预约ID：2
+25-01-27.16:39:25.807 [http-nio-8090-exec-10] INFO  AppointmentService     - 查询预约详情，预约ID：2
+25-01-27.16:39:28.830 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.16:39:28.830 [http-nio-8090-exec-1] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.16:39:31.146 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null
+25-01-27.16:39:31.146 [http-nio-8090-exec-2] INFO  ConsultationService    - 查询咨询记录列表，医生ID：2，用户ID：null，预约ID：null
+25-01-27.16:45:10.210 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-27.16:45:10.220 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-27.16:45:18.268 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 14768 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-01-27.16:45:18.270 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-01-27.16:45:18.270 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-01-27.16:45:18.720 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-01-27.16:45:18.734 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+25-01-27.16:45:19.091 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-01-27.16:45:19.092 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-01-27.16:45:19.092 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-27.16:45:19.092 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-27.16:45:19.094 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-01-27.16:45:19.100 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-01-27.16:45:19.100 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-27.16:45:19.100 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-27.16:45:19.233 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-27.16:45:19.234 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 918 ms
+25-01-27.16:45:19.603 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@32507479]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-01-27.16:45:19.609 [cluster-rtt-ClusterId{value='6797479fcb4ff53c57984b82', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:3}] to localhost:27017
+25-01-27.16:45:19.609 [cluster-ClusterId{value='6797479fcb4ff53c57984b82', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:4}] to localhost:27017
+25-01-27.16:45:19.609 [cluster-ClusterId{value='6797479fcb4ff53c57984b82', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15824500}
+25-01-27.16:45:20.126 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-01-27.16:45:20.142 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-01-27.16:45:20.149 [main            ] INFO  App                    - Started App in 2.28 seconds (JVM running for 3.491)
+25-01-27.16:46:22.403 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-27.16:46:22.403 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-27.16:46:22.403 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-01-27.16:46:23.167 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:46:23.196 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-27.16:46:23.411 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-27.16:49:37.366 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:49:47.774 [http-nio-8090-exec-4] INFO  Http11Processor        - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/api/consultations/list?doctorId=[object+Object] ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:482)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+25-01-27.16:49:50.492 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:50:09.263 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:50:19.853 [http-nio-8090-exec-6] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.16:50:19.861 [http-nio-8090-exec-6] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.16:50:19.964 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:50:28.605 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:50:32.688 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:51:16.941 [http-nio-8090-exec-8] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.16:51:16.942 [http-nio-8090-exec-8] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.16:51:17.059 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:51:40.912 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:51:43.582 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:51:45.733 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:51:49.005 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:52:13.740 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:52:19.230 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:52:22.332 [http-nio-8090-exec-10] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.16:52:22.332 [http-nio-8090-exec-10] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.16:52:22.364 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:52:38.337 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:52:42.695 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:52:46.490 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:52:48.641 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:52:53.369 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:53:13.458 [http-nio-8090-exec-3] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.16:53:13.459 [http-nio-8090-exec-3] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.16:53:13.679 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:53:16.172 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:53:18.206 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:53:22.507 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:54:00.339 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:54:09.787 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:57:53.780 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.16:58:08.226 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:07:22.594 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:07:25.328 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:07:26.697 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:07:28.201 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:07:31.195 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:18:39.370 [http-nio-8090-exec-9] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.17:18:39.370 [http-nio-8090-exec-9] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.17:18:39.379 [http-nio-8090-exec-9] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.17:18:39.391 [http-nio-8090-exec-8] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.17:18:39.392 [http-nio-8090-exec-8] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.17:18:41.404 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:18:41.413 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:18:43.199 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:18:44.358 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:18:45.487 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:18:46.872 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:19:03.985 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:04.659 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:12.280 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:12.865 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:14.156 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:15.017 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:16.424 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:25.192 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:27.931 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:35.598 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:40.748 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:45.256 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:59.347 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:21:59.592 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:22:02.754 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:22:03.570 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:22:04.512 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:22:04.776 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:22:05.477 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:22:06.371 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:22:06.638 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:25:00.494 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:25:00.735 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:25:02.331 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:25:02.339 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:25:06.265 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：video
+25-01-27.17:25:07.282 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：graphic
+25-01-27.17:25:09.058 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：video
+25-01-27.17:25:10.018 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：graphic
+25-01-27.17:25:11.343 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：video
+25-01-27.17:25:11.834 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：graphic
+25-01-27.17:25:13.075 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:25:21.194 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:25:21.512 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:25:22.722 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:25:22.986 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:25:56.111 [http-nio-8090-exec-5] INFO  UserController         - 收到用户登录请求，用户名：admin
+25-01-27.17:25:56.112 [http-nio-8090-exec-5] INFO  UserService            - 用户登录，用户名：admin
+25-01-27.17:25:56.113 [http-nio-8090-exec-5] INFO  UserService            - 用户登录成功，用户ID：1
+25-01-27.17:27:13.893 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：null，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:32:04.855 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:32:05.122 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:32:12.619 [http-nio-8090-exec-1] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.17:32:12.622 [http-nio-8090-exec-1] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.17:32:17.756 [http-nio-8090-exec-2] INFO  AppointmentController  - 收到查询预约详情请求，预约ID：1
+25-01-27.17:32:17.756 [http-nio-8090-exec-2] INFO  AppointmentService     - 查询预约详情，预约ID：1
+25-01-27.17:32:23.417 [http-nio-8090-exec-4] INFO  AppointmentController  - 收到查询预约详情请求，预约ID：1
+25-01-27.17:32:23.417 [http-nio-8090-exec-4] INFO  AppointmentService     - 查询预约详情，预约ID：1
+25-01-27.17:32:43.120 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:32:43.385 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:32:45.690 [http-nio-8090-exec-6] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.17:32:45.691 [http-nio-8090-exec-6] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.17:32:49.622 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:32:49.886 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:32:50.706 [http-nio-8090-exec-9] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.17:32:50.706 [http-nio-8090-exec-9] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.17:32:56.387 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:32:56.656 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:37:32.744 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录详情请求，ID：1
+25-01-27.17:37:32.744 [http-nio-8090-exec-5] INFO  ConsultationService    - 查询咨询记录详情，ID：1
+25-01-27.17:39:46.659 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:41:31.314 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-27.17:41:31.318 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-27.17:41:34.151 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 23116 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-01-27.17:41:34.153 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-01-27.17:41:34.154 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-01-27.17:41:34.608 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-01-27.17:41:34.623 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+25-01-27.17:41:34.981 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-01-27.17:41:34.981 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-01-27.17:41:34.982 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-27.17:41:34.982 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-27.17:41:34.984 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-01-27.17:41:34.989 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-01-27.17:41:34.990 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-27.17:41:34.990 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-27.17:41:35.115 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-27.17:41:35.116 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 919 ms
+25-01-27.17:41:35.499 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@4026461d]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-01-27.17:41:35.505 [cluster-rtt-ClusterId{value='679754cf0a48b250098b903e', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:5}] to localhost:27017
+25-01-27.17:41:35.505 [cluster-ClusterId{value='679754cf0a48b250098b903e', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:6}] to localhost:27017
+25-01-27.17:41:35.505 [cluster-ClusterId{value='679754cf0a48b250098b903e', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15031900}
+25-01-27.17:41:35.977 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-01-27.17:41:35.993 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-01-27.17:41:36.002 [main            ] INFO  App                    - Started App in 2.248 seconds (JVM running for 3.444)
+25-01-27.17:42:59.848 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-27.17:42:59.848 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-27.17:42:59.849 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-27.17:43:00.637 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:43:00.669 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-27.17:43:00.877 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-27.17:43:22.708 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:43:58.114 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:44:05.280 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:44:07.500 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:44:23.189 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录详情请求，ID：2
+25-01-27.17:44:23.189 [http-nio-8090-exec-5] INFO  ConsultationService    - 查询咨询记录详情，ID：2
+25-01-27.17:44:45.811 [http-nio-8090-exec-7] INFO  ConsultationController - 收到更新咨询记录请求，咨询ID：2
+25-01-27.17:44:45.816 [http-nio-8090-exec-7] INFO  ConsultationService    - 更新咨询记录，预约ID：2
+25-01-27.17:44:51.224 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:44:51.539 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:44:53.434 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:44:56.620 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录详情请求，ID：2
+25-01-27.17:44:56.620 [http-nio-8090-exec-1] INFO  ConsultationService    - 查询咨询记录详情，ID：2
+25-01-27.17:45:03.633 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:45:03.883 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:47:21.380 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:47:23.613 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录详情请求，ID：2
+25-01-27.17:47:23.613 [http-nio-8090-exec-6] INFO  ConsultationService    - 查询咨询记录详情，ID：2
+25-01-27.17:47:28.253 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录详情请求，ID：1
+25-01-27.17:47:28.253 [http-nio-8090-exec-5] INFO  ConsultationService    - 查询咨询记录详情，ID：1
+25-01-27.17:47:33.563 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:47:33.884 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:47:34.910 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:47:36.774 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:50:19.419 [http-nio-8090-exec-1] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.17:50:19.422 [http-nio-8090-exec-1] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.17:50:21.164 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:50:21.482 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:50:22.074 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:50:22.989 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:50:35.717 [http-nio-8090-exec-5] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.17:50:35.721 [http-nio-8090-exec-5] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.17:50:35.766 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:50:45.193 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:50:45.201 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:51:29.293 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:51:30.489 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:51:30.751 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:51:33.708 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:51:34.408 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:51:34.674 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:51:36.815 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:54:25.890 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:54:26.154 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:54:29.919 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:54:33.431 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录详情请求，ID：2
+25-01-27.17:54:33.431 [http-nio-8090-exec-10] INFO  ConsultationService    - 查询咨询记录详情，ID：2
+25-01-27.17:54:37.766 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:54:38.083 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:54:46.354 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.17:58:15.121 [http-nio-8090-exec-4] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.17:58:15.122 [http-nio-8090-exec-4] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.17:58:17.710 [http-nio-8090-exec-6] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.17:58:17.711 [http-nio-8090-exec-6] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.17:58:17.743 [http-nio-8090-exec-5] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.17:58:17.744 [http-nio-8090-exec-5] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.17:58:33.182 [http-nio-8090-exec-7] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.17:58:33.183 [http-nio-8090-exec-7] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.17:58:33.405 [http-nio-8090-exec-8] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.17:58:33.406 [http-nio-8090-exec-8] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:07:26.648 [http-nio-8090-exec-9] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:07:26.649 [http-nio-8090-exec-9] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:07:26.862 [http-nio-8090-exec-10] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:07:26.862 [http-nio-8090-exec-10] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:07:30.341 [http-nio-8090-exec-1] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:07:30.342 [http-nio-8090-exec-1] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:07:30.545 [http-nio-8090-exec-2] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:07:30.546 [http-nio-8090-exec-2] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:07:35.973 [http-nio-8090-exec-3] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.18:07:35.973 [http-nio-8090-exec-3] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.18:07:37.155 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:07:37.162 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:07:37.794 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:07:39.770 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:07:39.779 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:07:47.522 [http-nio-8090-exec-9] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.18:07:47.522 [http-nio-8090-exec-9] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.18:07:49.297 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:07:49.621 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:08:48.064 [http-nio-8090-exec-2] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:08:48.065 [http-nio-8090-exec-2] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:09:03.382 [http-nio-8090-exec-3] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:09:03.383 [http-nio-8090-exec-3] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:10:01.526 [http-nio-8090-exec-4] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:10:01.527 [http-nio-8090-exec-4] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:10:03.385 [http-nio-8090-exec-6] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:10:03.386 [http-nio-8090-exec-6] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:10:10.720 [http-nio-8090-exec-5] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:10:10.721 [http-nio-8090-exec-5] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:10:27.120 [http-nio-8090-exec-7] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:10:27.121 [http-nio-8090-exec-7] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:10:59.247 [http-nio-8090-exec-8] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:10:59.248 [http-nio-8090-exec-8] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:10:59.274 [http-nio-8090-exec-9] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:10:59.275 [http-nio-8090-exec-9] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:10:59.584 [http-nio-8090-exec-10] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:10:59.585 [http-nio-8090-exec-10] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:11:02.994 [http-nio-8090-exec-1] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:11:02.995 [http-nio-8090-exec-1] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:11:03.202 [http-nio-8090-exec-2] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:11:03.203 [http-nio-8090-exec-2] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:12:57.368 [http-nio-8090-exec-3] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:12:57.369 [http-nio-8090-exec-3] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:12:58.662 [http-nio-8090-exec-4] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:12:58.662 [http-nio-8090-exec-4] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:13:03.696 [http-nio-8090-exec-6] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:13:03.697 [http-nio-8090-exec-6] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:15:00.112 [http-nio-8090-exec-5] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:15:00.113 [http-nio-8090-exec-5] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:15:07.851 [http-nio-8090-exec-7] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:15:07.852 [http-nio-8090-exec-7] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:15:08.058 [http-nio-8090-exec-8] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:15:08.059 [http-nio-8090-exec-8] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:15:12.888 [http-nio-8090-exec-9] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:15:12.889 [http-nio-8090-exec-9] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:15:15.445 [http-nio-8090-exec-10] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:15:15.446 [http-nio-8090-exec-10] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:15:15.649 [http-nio-8090-exec-1] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:15:15.650 [http-nio-8090-exec-1] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:17:30.703 [http-nio-8090-exec-2] INFO  UserController         - 收到用户登录请求，用户名：admin
+25-01-27.18:17:30.703 [http-nio-8090-exec-2] INFO  UserService            - 用户登录，用户名：admin
+25-01-27.18:17:30.712 [http-nio-8090-exec-2] INFO  UserService            - 用户登录成功，用户ID：1
+25-01-27.18:17:31.024 [http-nio-8090-exec-3] INFO  UserController         - 收到获取用户信息请求，用户ID：1
+25-01-27.18:17:31.025 [http-nio-8090-exec-3] INFO  UserService            - 获取用户信息，用户ID：1
+25-01-27.18:17:45.545 [http-nio-8090-exec-4] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.18:17:45.545 [http-nio-8090-exec-4] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.18:17:45.547 [http-nio-8090-exec-4] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.18:17:45.557 [http-nio-8090-exec-6] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:17:45.557 [http-nio-8090-exec-6] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:17:47.215 [http-nio-8090-exec-5] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.18:17:47.215 [http-nio-8090-exec-5] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.18:17:48.640 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:17:48.951 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:19:03.111 [http-nio-8090-exec-9] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:19:03.112 [http-nio-8090-exec-9] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:19:06.684 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:19:06.691 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:19:20.089 [http-nio-8090-exec-2] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:19:20.089 [http-nio-8090-exec-2] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:19:22.888 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:19:22.896 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:19:42.662 [http-nio-8090-exec-6] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:19:42.663 [http-nio-8090-exec-6] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:20:12.473 [http-nio-8090-exec-5] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:20:12.474 [http-nio-8090-exec-5] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:20:12.795 [http-nio-8090-exec-7] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:20:12.796 [http-nio-8090-exec-7] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:22:39.196 [http-nio-8090-exec-8] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:22:39.197 [http-nio-8090-exec-8] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:22:39.401 [http-nio-8090-exec-9] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:22:39.402 [http-nio-8090-exec-9] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:25:38.524 [http-nio-8090-exec-10] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:25:38.525 [http-nio-8090-exec-10] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:25:49.711 [http-nio-8090-exec-1] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:25:49.712 [http-nio-8090-exec-1] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:25:49.923 [http-nio-8090-exec-2] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:25:49.923 [http-nio-8090-exec-2] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:25:59.487 [http-nio-8090-exec-3] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.18:25:59.487 [http-nio-8090-exec-3] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.18:25:59.489 [http-nio-8090-exec-3] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.18:25:59.501 [http-nio-8090-exec-4] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:25:59.501 [http-nio-8090-exec-4] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:26:04.649 [http-nio-8090-exec-6] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:26:04.650 [http-nio-8090-exec-6] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:26:26.560 [http-nio-8090-exec-5] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.18:26:26.560 [http-nio-8090-exec-5] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.18:26:26.562 [http-nio-8090-exec-5] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.18:26:26.876 [http-nio-8090-exec-7] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:26:26.877 [http-nio-8090-exec-7] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:26:34.211 [http-nio-8090-exec-8] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:26:34.212 [http-nio-8090-exec-8] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:27:06.223 [http-nio-8090-exec-9] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:27:06.223 [http-nio-8090-exec-9] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:27:34.136 [http-nio-8090-exec-10] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:27:34.137 [http-nio-8090-exec-10] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:28:07.371 [http-nio-8090-exec-1] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:28:07.372 [http-nio-8090-exec-1] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:29:41.328 [http-nio-8090-exec-2] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:29:41.329 [http-nio-8090-exec-2] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:33:18.362 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:34:43.810 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:34:52.928 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:34:54.501 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:34:54.753 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:34:55.170 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:36:25.001 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:36:25.008 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:36:25.889 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:36:27.564 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:36:54.160 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:36:54.426 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:36:54.709 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:36:58.446 [http-nio-8090-exec-5] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.18:36:58.446 [http-nio-8090-exec-5] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.18:37:12.246 [http-nio-8090-exec-7] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.18:37:12.246 [http-nio-8090-exec-7] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.18:37:14.828 [http-nio-8090-exec-8] INFO  AppointmentController  - 收到查询预约详情请求，预约ID：2
+25-01-27.18:37:14.828 [http-nio-8090-exec-8] INFO  AppointmentService     - 查询预约详情，预约ID：2
+25-01-27.18:40:21.739 [http-nio-8090-exec-9] INFO  UserController         - 收到用户登录请求，用户名：admin
+25-01-27.18:40:21.739 [http-nio-8090-exec-9] INFO  UserService            - 用户登录，用户名：admin
+25-01-27.18:40:21.741 [http-nio-8090-exec-9] INFO  UserService            - 用户登录成功，用户ID：1
+25-01-27.18:40:22.055 [http-nio-8090-exec-10] INFO  UserController         - 收到获取用户信息请求，用户ID：1
+25-01-27.18:40:22.056 [http-nio-8090-exec-10] INFO  UserService            - 获取用户信息，用户ID：1
+25-01-27.18:40:25.939 [http-nio-8090-exec-1] INFO  PsychologistController - 收到获取心理医生列表请求，雇佣状态：null
+25-01-27.18:40:25.942 [http-nio-8090-exec-1] INFO  PsychologistService    - 获取心理医生列表，参数：employmentStatus=null
+25-01-27.18:40:26.806 [http-nio-8090-exec-2] INFO  PsychologistController - 收到获取心理医生列表请求，雇佣状态：null
+25-01-27.18:40:26.806 [http-nio-8090-exec-2] INFO  PsychologistService    - 获取心理医生列表，参数：employmentStatus=null
+25-01-27.18:41:37.633 [http-nio-8090-exec-3] INFO  UserController         - 收到获取用户列表请求，角色：null
+25-01-27.18:41:37.633 [http-nio-8090-exec-3] INFO  UserService            - 获取用户列表，角色：null
+25-01-27.18:41:38.624 [http-nio-8090-exec-4] INFO  PsychologistController - 收到获取心理医生列表请求，雇佣状态：null
+25-01-27.18:41:38.624 [http-nio-8090-exec-4] INFO  PsychologistService    - 获取心理医生列表，参数：employmentStatus=null
+25-01-27.18:41:39.019 [http-nio-8090-exec-6] INFO  UserController         - 收到获取用户列表请求，角色：null
+25-01-27.18:41:39.019 [http-nio-8090-exec-6] INFO  UserService            - 获取用户列表，角色：null
+25-01-27.18:42:42.071 [http-nio-8090-exec-5] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.18:42:42.071 [http-nio-8090-exec-5] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.18:42:42.074 [http-nio-8090-exec-5] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.18:42:42.388 [http-nio-8090-exec-7] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:42:42.389 [http-nio-8090-exec-7] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:45:36.929 [http-nio-8090-exec-8] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:45:36.930 [http-nio-8090-exec-8] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:47:56.380 [http-nio-8090-exec-9] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.18:47:56.380 [http-nio-8090-exec-9] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.18:47:56.382 [http-nio-8090-exec-9] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.18:47:56.701 [http-nio-8090-exec-10] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:47:56.702 [http-nio-8090-exec-10] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:48:10.743 [http-nio-8090-exec-1] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.18:48:10.743 [http-nio-8090-exec-1] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.18:48:10.745 [http-nio-8090-exec-1] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.18:48:10.753 [http-nio-8090-exec-2] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:48:10.754 [http-nio-8090-exec-2] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:48:20.914 [http-nio-8090-exec-3] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-01-27.18:48:20.914 [http-nio-8090-exec-3] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-01-27.18:48:22.064 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:48:22.318 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:48:22.397 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:48:33.718 [http-nio-8090-exec-7] INFO  UserController         - 收到用户登录请求，用户名：admin
+25-01-27.18:48:33.718 [http-nio-8090-exec-7] INFO  UserService            - 用户登录，用户名：admin
+25-01-27.18:48:33.719 [http-nio-8090-exec-7] INFO  UserService            - 用户登录成功，用户ID：1
+25-01-27.18:48:33.982 [http-nio-8090-exec-8] INFO  UserController         - 收到获取用户信息请求，用户ID：1
+25-01-27.18:48:33.982 [http-nio-8090-exec-8] INFO  UserService            - 获取用户信息，用户ID：1
+25-01-27.18:48:47.308 [http-nio-8090-exec-9] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.18:48:47.308 [http-nio-8090-exec-9] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.18:48:47.309 [http-nio-8090-exec-9] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.18:48:47.620 [http-nio-8090-exec-10] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:48:47.621 [http-nio-8090-exec-10] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:52:03.671 [http-nio-8090-exec-1] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.18:52:03.671 [http-nio-8090-exec-1] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.18:52:03.672 [http-nio-8090-exec-1] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.18:52:03.682 [http-nio-8090-exec-2] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:52:03.683 [http-nio-8090-exec-2] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:53:45.806 [http-nio-8090-exec-3] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.18:53:45.806 [http-nio-8090-exec-3] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.18:53:45.807 [http-nio-8090-exec-3] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.18:53:46.121 [http-nio-8090-exec-4] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:53:46.122 [http-nio-8090-exec-4] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:53:56.147 [http-nio-8090-exec-6] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:53:56.148 [http-nio-8090-exec-6] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:54:03.197 [http-nio-8090-exec-5] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:54:03.198 [http-nio-8090-exec-5] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:54:19.648 [http-nio-8090-exec-7] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:54:19.649 [http-nio-8090-exec-7] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:54:19.983 [http-nio-8090-exec-8] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:54:19.984 [http-nio-8090-exec-8] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:54:26.755 [http-nio-8090-exec-9] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:54:26.755 [http-nio-8090-exec-9] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:56:53.657 [http-nio-8090-exec-10] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-01-27.18:56:53.657 [http-nio-8090-exec-10] INFO  UserService            - 用户登录，用户名：zs
+25-01-27.18:56:53.659 [http-nio-8090-exec-10] INFO  UserService            - 用户登录成功，用户ID：2
+25-01-27.18:56:53.667 [http-nio-8090-exec-1] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-01-27.18:56:53.668 [http-nio-8090-exec-1] INFO  UserService            - 获取用户信息，用户ID：2
+25-01-27.18:56:55.001 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.18:56:55.007 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-01-27.19:01:23.567 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-27.19:01:23.570 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

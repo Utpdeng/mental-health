@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!-- 使用驼峰命名法转换字段 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 打印查询语句 -->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    
+    <typeAliases>
+        <!-- 指定要配置别名的包，会自动扫描包内的类 -->
+        <package name="com.dil.user.entity"/>
+    </typeAliases>
+</configuration> 

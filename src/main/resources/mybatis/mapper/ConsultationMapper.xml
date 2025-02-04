@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dil.consultation.mapper.ConsultationMapper">
+    
+    <insert id="createConsultation" parameterType="com.dil.consultation.entity.Consultation" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO consultations (
+            appointment_id, doctor_id, user_id, created_at
+        ) VALUES (
+            #{appointmentId}, #{doctorId}, #{userId}, NOW()
+        )
+    </insert>
+
+    <update id="updateConsultation" parameterType="com.dil.consultation.entity.Consultation">
+        UPDATE consultations
+        <set>
+            <if test="feedback != null">
+                feedback = #{feedback},
+            </if>
+            updated_at = NOW(),
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <select id="getConsultationList" resultType="com.dil.consultation.dto.ConsultationResponse">
+        SELECT 
+            c.id,
+            c.appointment_id,
+            c.doctor_id,
+            c.user_id,
+            c.chat_log,
+            a.form,
+            a.time,
+            a.status,
+            up.nickname as username,
+            upd.nickname as doctorName,
+            up.avatar_url as avatarUrl,
+            upd.avatar_url as doctorAvatar,
+            up.gender,
+            c.feedback,
+            c.created_at,
+            c.updated_at
+        FROM
+            consultations c left join appointments a on c.appointment_id = a.id left join user_profiles up on c.user_id = up.user_id left join user_profiles upd on c.doctor_id = upd.user_id
+        WHERE 1=1
+            <if test="doctorId != null">
+                AND c.doctor_id = #{doctorId}
+            </if>
+            <if test="userId != null and userId != ''">
+                AND c.user_id = #{userId}
+            </if>
+            <if test="appointmentId != null and appointmentId != ''">
+                AND c.appointment_id = #{appointmentId}
+            </if>
+            <if test="form != null and form != ''">
+                AND a.form = #{form}
+            </if>
+        and a.status != 'pending'
+        ORDER BY c.created_at DESC
+    </select>
+
+    <select id="getConsultationById" resultType="com.dil.consultation.dto.ConsultationResponse">
+        SELECT 
+            c.id,
+            c.appointment_id,
+            c.doctor_id,
+            c.user_id,
+            a.form,
+            a.time,
+            a.status,
+            up.nickname as username,
+            upd.nickname as doctorName,
+            up.avatar_url as avatarUrl,
+            upd.avatar_url as doctorAvatar,
+            up.gender,
+            c.chat_log,
+            c.feedback,
+            c.created_at,
+            c.updated_at
+        FROM
+            consultations c left join appointments a on c.appointment_id = a.id left join user_profiles up on c.user_id = up.user_id left join user_profiles upd on c.doctor_id = upd.user_id
+        WHERE c.id = #{id}
+    </select>
+</mapper> 

@@ -121,7 +121,7 @@ public class AssessmentService {
     private AssessmentResponse convertToResponse(Assessment assessment) {
         AssessmentResponse response = new AssessmentResponse();
         BeanUtils.copyProperties(assessment, response);
-        // TODO: 查询创建者信息
+        // 查询创建者信息
         return response;
     }
     

@@ -1,131 +1,163 @@
 <template>
   <div class="login-page">
-    <div class="login-container">
-      <el-card class="login-card">
-        <div class="login-header">
-          <Logo :showText="false" />
-          <h2>登录</h2>
+    <div class="page-header">
+      <div class="container">
+        <h1>登录</h1>
+        <p>欢迎回来，请登录您的账户</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="login-form">
+          <el-form 
+            :model="form" 
+            :rules="rules" 
+            ref="form" 
+            label-width="80px"
+            @submit.native.prevent
+          >
+            <el-form-item label="账号" prop="username">
+              <el-input 
+                v-model="form.username" 
+                placeholder="请输入用户名或邮箱"
+              ></el-input>
+            </el-form-item>
+            <el-form-item label="密码" prop="password">
+              <el-input 
+                type="password" 
+                v-model="form.password" 
+                placeholder="请输入密码"
+                show-password
+              ></el-input>
+            </el-form-item>
+            <el-form-item>
+              <el-button 
+                type="primary" 
+                :loading="loading" 
+                @click="submitForm('form')"
+                style="width: 100%"
+              >登录</el-button>
+            </el-form-item>
+          </el-form>
+          <div class="form-footer">
+            <p class="register-link">还没有账户？<router-link to="/register">立即注册</router-link></p>
+            <el-button type="text">忘记密码？</el-button>
+          </div>
         </div>
-        
-        <el-form :model="loginForm" :rules="rules" ref="loginForm">
-          <el-form-item prop="username">
-            <el-input 
-              v-model="loginForm.username" 
-              prefix-icon="el-icon-user"
-              placeholder="用户名">
-            </el-input>
-          </el-form-item>
-          
-          <el-form-item prop="password">
-            <el-input 
-              v-model="loginForm.password" 
-              prefix-icon="el-icon-lock"
-              type="password"
-              placeholder="密码">
-            </el-input>
-          </el-form-item>
-          
-          <el-form-item prop="role">
-            <el-select v-model="loginForm.role" placeholder="请选择角色" style="width: 100%">
-              <el-option label="管理员" value="admin"></el-option>
-              <el-option label="教师" value="teacher"></el-option>
-              <el-option label="学生" value="student"></el-option>
-            </el-select>
-          </el-form-item>
-          
-          <el-form-item>
-            <el-button type="primary" @click="handleLogin" style="width: 100%">
-              登录
-            </el-button>
-          </el-form-item>
-        </el-form>
-      </el-card>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '@/components/common/Logo.vue'
+import { mapActions } from 'vuex'
+import { login } from '@/api/user' // 导入 login 接口
 
 export default {
-  name: 'Login',
-  components: {
-    Logo
-  },
+  name: 'LoginPage',
   data() {
     return {
-      loginForm: {
+      loading: false,
+      form: {
         username: '',
-        password: '',
-        role: ''
+        password: ''
       },
       rules: {
         username: [
-          { required: true, message: '请输入用户名', trigger: 'blur' }
+          { required: true, message: '请输入用户名或邮箱', trigger: 'blur' }
         ],
         password: [
           { required: true, message: '请输入密码', trigger: 'blur' }
-        ],
-        role: [
-          { required: true, message: '请选择角色', trigger: 'change' }
         ]
       }
     }
   },
   methods: {
-    handleLogin() {
-      this.$refs.loginForm.validate(valid => {
+    ...mapActions('user', ['getUserInfo']),
+    submitForm(formName) {
+      this.$refs[formName].validate(async (valid) => {
         if (valid) {
-          this.$store.dispatch('permission/login', {
-            name: this.loginForm.username,
-            role: this.loginForm.role
-          })
-          
-          const redirectPath = this.$route.query.redirect || this.getDefaultRedirect()
-          this.$router.push(redirectPath)
+          this.loading = true
+          try {
+            // 直接调用登录接口
+            const response = await login(this.form)
+            
+            // 保存登录信息到 vuex
+            await this.$store.commit('user/SET_TOKEN', response.data.token)
+            await this.$store.commit('user/SET_USER_ID', response.data.userId)
+            
+            // 存储到 localStorage
+            localStorage.setItem('token', response.data.token)
+            localStorage.setItem('userId', response.data.userId)
+            
+            // 获取用户信息
+            await this.getUserInfo()
+            
+            this.$message.success('登录成功')
+            
+            const role = this.$store.state.user.role
+            console.log('Redirecting based on role:', role)
+            
+            switch (role) {
+              case 'admin':
+                this.$router.push('/admin')
+                break
+              case 'doctor':
+                this.$router.push('/doctor/dashboard')
+                break
+              default:
+                this.$router.push('/')
+            }
+          } catch (error) {
+            this.$message.error(error.message || '登录失败')
+          } finally {
+            this.loading = false
+          }
         }
       })
-    },
-    getDefaultRedirect() {
-      const roleRedirectMap = {
-        admin: '/admin',
-        teacher: '/teacher',
-        student: '/student'
-      }
-      return roleRedirectMap[this.loginForm.role] || '/'
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-.login-page {
-  min-height: 100vh;
-  @include flex(row, center, center);
-  background: linear-gradient(135deg, $primary-color, $secondary-color);
-  padding: 1rem;
+<style scoped>
+.page-header {
+  margin-top: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 60px 0;
+  text-align: center;
 }
 
-.login-container {
-  width: 100%;
+.login-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 400px;
+  margin: 0 auto;
 }
 
-.login-card {
-  .login-header {
-    text-align: center;
-    margin-bottom: 2rem;
-
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      color: $gray-800;
-      font-size: 1.5rem;
-    }
-  }
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
-</style> 
+
+.register-link {
+  margin: 0;
+}
+
+.register-link a,
+.el-button--text {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.register-link a:hover,
+.el-button--text:hover {
+  text-decoration: underline;
+}
+</style>

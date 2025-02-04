@@ -1,74 +1,126 @@
 <template>
-  <div class="about">
-    <div class="container">
-      <h1 class="page-title">关于我们</h1>
-      
-      <el-row :gutter="40">
-        <el-col :md="12">
-          <div class="about-content">
-            <h2>校园心理健康中心</h2>
-            <p>我们致力于为广大师生提供专业的心理健康服务，创造积极向上的校园心理环境。通过专业的心理咨询、心理测评、心理课程等多种形式，帮助师生更好地认识自我、发展自我。</p>
-            
-            <h3>我们的使命</h3>
-            <p>促进师生心理健康，营造和谐校园氛围，助力人才培养。</p>
-            
-            <h3>我们的愿景</h3>
-            <p>打造一流的校园心理服务平台，成为学生心理健康的守护者。</p>
-            
-            <h3>核心价值观</h3>
-            <ul>
-              <li>专业性：提供高质量的心理健康服务</li>
-              <li>关爱性：以人为本，真诚关怀每位师生</li>
-              <li>发展性：促进师生的心理健康与个人成长</li>
-              <li>创新性：运用现代技术提升服务质量</li>
-            </ul>
-          </div>
-        </el-col>
-        
-        <el-col :md="12">
-          <div class="team-section">
-            <h2>我们的团队</h2>
-            <div class="team-grid">
-              <div v-for="member in teamMembers" :key="member.id" class="team-member">
-                <el-avatar :size="80" :src="member.avatar"></el-avatar>
-                <h3>{{ member.name }}</h3>
-                <p class="title">{{ member.title }}</p>
-                <p class="description">{{ member.description }}</p>
+  <div class="about-page">
+    <div class="page-header">
+      <div class="container">
+        <h1>关于我们</h1>
+        <p>专业的心理健康服务团队，您的心灵成长伙伴</p>
+      </div>
+    </div>
+
+    <div class="section mission-section">
+      <div class="container">
+        <div class="mission-content">
+          <div class="mission-text">
+            <h2>我们的使命</h2>
+            <p>致力于为每个人提供专业、温暖的心理健康服务，帮助更多人获得心灵的平静与成长。我们相信，每个人都值得拥有健康、快乐的人生。</p>
+            <div class="mission-stats">
+              <div class="stat-item">
+                <div class="stat-number">10000+</div>
+                <div class="stat-label">服务案例</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">专业团队</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">满意度</div>
               </div>
             </div>
           </div>
-        </el-col>
-      </el-row>
+          <div class="mission-image">
+            <img src="@/assets/about/231.png" alt="我们的使命">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section team-section">
+      <div class="container">
+        <h2>核心团队</h2>
+        <div class="team-grid">
+          <div class="team-member" v-for="(member, index) in teamMembers" :key="index">
+            <div class="member-avatar">
+              <img :src="member.avatar" :alt="member.name">
+            </div>
+            <h3>{{ member.name }}</h3>
+            <p class="member-title">{{ member.title }}</p>
+            <p class="member-description">{{ member.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section timeline-section">
+      <div class="container">
+        <h2>发展历程</h2>
+        <el-timeline>
+          <el-timeline-item
+            v-for="(activity, index) in timeline"
+            :key="index"
+            :timestamp="activity.date"
+            placement="top"
+          >
+            <h3>{{ activity.title }}</h3>
+            <p>{{ activity.content }}</p>
+          </el-timeline-item>
+        </el-timeline>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About',
+  name: 'AboutPage',
   data() {
     return {
       teamMembers: [
         {
-          id: 1,
-          name: '张教授',
-          title: '中心主任',
-          description: '临床心理学博士，从事心理咨询20年',
-          avatar: 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png'
+          name: '张医生',
+          title: '首席心理咨询师',
+          description: '从业20年，擅长个人成长、情感关系咨询',
+          avatar: require('@/assets/about/1.jpg')
         },
         {
-          id: 2,
-          name: '李医生',
-          title: '心理咨询师',
-          description: '心理学硕士，注册心理咨询师',
-          avatar: 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png'
+          name: '李教授',
+          title: '心理学专家',
+          description: '心理学博士，专注青少年心理健康研究',
+          avatar: require('@/assets/about/2.jpg')
         },
         {
-          id: 3,
           name: '王老师',
-          title: '心理咨询师',
-          description: '教育心理学硕士，学校心理辅导经验丰富',
-          avatar: 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png'
+          title: '资深心理咨询师',
+          description: '擅长压力管理、职场心理调适',
+          avatar: require('@/assets/about/3.jpg')
+        },
+        {
+          name: '陈医生',
+          title: '心理治疗师',
+          description: '专注抑郁焦虑等心理障碍治疗',
+          avatar: require('@/assets/about/4.jpg')
+        }
+      ],
+      timeline: [
+        {
+          date: '2024年',
+          title: '成立之初',
+          content: '心理健康平台正式成立，开始提供线上心理咨询服务'
+        },
+        {
+          date: '2025年',
+          title: '业务扩展',
+          content: '预计开设线下咨询中心，推出团体心理辅导服务'
+        },
+        {
+          date: '2025年',
+          title: '技术创新',
+          content: '引入AI辅助系统，提升服务效率和质量'
+        },
+        {
+          date: '2025年',
+          title: '全国布局',
+          content: '预计服务网络覆盖全国30个主要城市'
         }
       ]
     }
@@ -76,99 +128,141 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.about {
-  .page-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: $gray-800;
-    margin-bottom: 3rem;
+<style scoped>
+.page-header {
+  margin-top: 10px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.mission-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.mission-text {
+  flex: 1;
+}
+
+.mission-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.mission-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+.mission-image {
+  flex: 1;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-section {
+  background: var(--background-color);
+}
+
+.team-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.team-member {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.member-avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-title {
+  color: var(--primary-color);
+  margin: 10px 0;
+}
+
+.member-description {
+  color: #666;
+}
+
+.timeline-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .mission-content {
+    flex-direction: column;
   }
 
-  .about-content {
-    h2 {
-      font-size: 2rem;
-      color: $gray-800;
-      margin-bottom: 1.5rem;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      color: $gray-700;
-      margin: 2rem 0 1rem;
-    }
-
-    p {
-      color: $gray-600;
-      line-height: 1.8;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-
-      li {
-        color: $gray-600;
-        margin: 0.5rem 0;
-        padding-left: 1.5rem;
-        position: relative;
-
-        &:before {
-          content: "•";
-          color: $primary-color;
-          position: absolute;
-          left: 0;
-        }
-      }
-    }
+  .mission-stats {
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .team-section {
-    h2 {
-      font-size: 2rem;
-      color: $gray-800;
-      margin-bottom: 2rem;
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 2rem;
-      
-      @include respond-to('lg') {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .team-member {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: $gray-100;
-      border-radius: 0.5rem;
-      @include transition;
-
-      &:hover {
-        transform: translateY(-5px);
-        @include box-shadow(2);
-      }
-
-      h3 {
-        font-size: 1.25rem;
-        color: $gray-800;
-        margin: 1rem 0 0.5rem;
-      }
-
-      .title {
-        color: $primary-color;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-      }
-
-      .description {
-        color: $gray-600;
-      }
-    }
+  .team-grid {
+    grid-template-columns: 1fr;
   }
 }
-</style> 
+</style>

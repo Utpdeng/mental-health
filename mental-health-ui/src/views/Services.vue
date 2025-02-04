@@ -1,116 +1,191 @@
 <template>
-  <div class="services">
-    <div class="container">
-      <h1 class="page-title">服务项目</h1>
-      
-      <el-row :gutter="30">
-        <el-col :xs="24" :sm="12" :md="8" v-for="service in services" :key="service.id">
-          <el-card class="service-card" :body-style="{ padding: '0px' }">
-            <div class="service-image">
-              <font-awesome-icon :icon="service.icon" />
+  <div class="services-page">
+    <div class="page-header">
+      <div class="container">
+        <h1>服务项目</h1>
+        <p>为您提供专业的心理健康服务</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="services-list">
+          <div class="service-item" v-for="(service, index) in services" :key="index">
+            <div class="service-icon">
+              <i :class="service.icon"></i>
             </div>
             <div class="service-content">
               <h3>{{ service.title }}</h3>
               <p>{{ service.description }}</p>
-              <el-button type="primary" plain>了解更多</el-button>
+              <ul class="service-features">
+                <li v-for="(feature, fIndex) in service.features" :key="fIndex">
+                  {{ feature }}
+                </li>
+              </ul>
+              <el-button type="primary" class="service-btn" @click="goToService(service.path)">了解更多</el-button>
             </div>
-          </el-card>
-        </el-col>
-      </el-row>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Services',
+  name: 'ServicesPage',
   data() {
     return {
       services: [
         {
-          id: 1,
-          icon: ['fas', 'user-md'],
+          icon: 'fas fa-user-md',
           title: '个人咨询',
-          description: '一对一专业心理咨询服务，帮助您解决个人困扰，提升心理健康水平。'
+          description: '一对一专业心理咨询服务，帮助您解决个人困扰。',
+          features: [
+            '专业心理咨询师一对一服务',
+            '个性化解决方案',
+            '全程保密服务',
+            '灵活的预约时间'
+          ],
+          path: '/experts',
         },
         {
-          id: 2,
-          icon: ['fas', 'users'],
-          title: '团体辅导',
-          description: '小组形式的心理辅导活动，促进交流与成长，提升社交能力。'
+          icon: 'fas fa-users',
+          title: '团体咨询',
+          description: '小组形式的心理辅导，共同分享、共同成长。',
+          features: [
+            '专业团体辅导',
+            '主题式小组活动',
+            '互助成长环境',
+            '社交技能提升'
+          ],
+          path: '/experts',
         },
         {
-          id: 3,
-          icon: ['fas', 'brain'],
-          title: '心理测评',
-          description: '专业的心理测评工具，帮助了解自己的心理状态和性格特点。'
+          icon: 'fas fa-clipboard-check',
+          title: '心理评估',
+          description: '专业的心理测评工具，帮助您更好地了解自己。',
+          features: [
+            '标准化心理测评',
+            '个性化分析报告',
+            '专业解读服务',
+            '发展建议制定'
+          ],
+          path: '/assessment',
         },
         {
-          id: 4,
-          icon: ['fas', 'chalkboard-teacher'],
+          icon: 'fas fa-graduation-cap',
           title: '心理课程',
-          description: '系统的心理健康教育课程，提供心理知识和自我成长指导。'
-        },
-        {
-          id: 5,
-          icon: ['fas', 'hands-helping'],
-          title: '危机干预',
-          description: '为遇到严重心理困扰的学生提供及时的危机干预服务。'
-        },
-        {
-          id: 6,
-          icon: ['fas', 'comments'],
-          title: '在线咨询',
-          description: '便捷的线上咨询服务，随时随地获取心理支持。'
+          description: '系统的心理健康教育课程，提升心理素质。',
+          features: [
+            '系统化课程设计',
+            '互动式学习体验',
+            '实用技能培训',
+            '案例分析讨论'
+          ],
+          path: '/education',
         }
       ]
+    }
+  },
+  methods: {
+    goToService(path) {
+      this.$router.push(path)
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-.services {
-  .page-title {
+<style scoped>
+.page-header {
+  margin-top: 10px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.services-list {
+  padding: 40px 0;
+}
+
+.service-item {
+  display: flex;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  flex: 0 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.service-content {
+  flex: 1;
+  padding-left: 30px;
+}
+
+.service-content h3 {
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.service-features {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.service-features li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.service-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.service-btn {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .service-item {
+    flex-direction: column;
     text-align: center;
-    font-size: 2.5rem;
-    color: $gray-800;
-    margin-bottom: 3rem;
   }
 
-  .service-card {
-    margin-bottom: 2rem;
-    @include transition;
-    
-    &:hover {
-      transform: translateY(-5px);
-      @include box-shadow(2);
-    }
+  .service-icon {
+    margin-bottom: 20px;
+  }
 
-    .service-image {
-      height: 150px;
-      @include flex(row, center, center);
-      background: linear-gradient(135deg, $primary-color, $secondary-color);
-      color: $white;
-      font-size: 4rem;
-    }
+  .service-content {
+    padding-left: 0;
+  }
 
-    .service-content {
-      padding: 1.5rem;
-      text-align: center;
-
-      h3 {
-        font-size: 1.5rem;
-        color: $gray-800;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        color: $gray-600;
-        margin-bottom: 1.5rem;
-        min-height: 4.5rem;
-      }
-    }
+  .service-features li {
+    text-align: left;
   }
 }
-</style> 
+</style>

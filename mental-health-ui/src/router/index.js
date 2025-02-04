@@ -1,143 +1,261 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import store from '@/store'
+import Home from '@/views/Home.vue'
 
 Vue.use(VueRouter)
 
-// 布局组件
-const Layout = () => import('@/components/layout/Layout.vue')
+// 重写路由的push方法
+const routerPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return routerPush.call(this, location).catch(error => error)
+}
 
-// 路由配置
+// 重写路由的replace方法
+const routerReplace = VueRouter.prototype.replace
+VueRouter.prototype.replace = function replace(location) {
+  return routerReplace.call(this, location).catch(error => error)
+}
+
 const routes = [
   {
     path: '/',
-    component: Layout,
-    children: [
-      {
-        path: '',
-        name: 'Home',
-        component: () => import('@/views/Home.vue'),
-        meta: { title: '首页' }
-      }
-    ]
+    name: 'Home',
+    component: Home
   },
   {
     path: '/services',
-    component: Layout,
-    children: [
-      {
-        path: '',
-        name: 'Services',
-        component: () => import('@/views/Services.vue'),
-        meta: { title: '服务项目' }
-      }
-    ]
+    name: 'Services',
+    component: () => import('@/views/Services.vue')
   },
   {
     path: '/about',
-    component: Layout,
-    children: [
-      {
-        path: '',
-        name: 'About',
-        component: () => import('@/views/About.vue'),
-        meta: { title: '关于我们' }
-      }
-    ]
+    name: 'About',
+    component: () => import('@/views/About.vue')
   },
   {
-    path: '/resources',
-    component: Layout,
-    children: [
-      {
-        path: '',
-        name: 'Resources',
-        component: () => import('@/views/Resources.vue'),
-        meta: { title: '联系资源' }
-      }
-    ]
-  },
-  {
-    path: '/admin',
-    component: Layout,
-    meta: { requiresAuth: true, role: 'admin' },
-    children: [
-      {
-        path: '',
-        name: 'AdminDashboard',
-        component: () => import('@/views/admin/Dashboard.vue'),
-        meta: { title: '管理控制台' }
-      }
-    ]
-  },
-  {
-    path: '/teacher',
-    component: Layout,
-    meta: { requiresAuth: true, role: 'teacher' },
-    children: [
-      {
-        path: '',
-        name: 'TeacherDashboard',
-        component: () => import('@/views/teacher/Dashboard.vue'),
-        meta: { title: '教师工作台' }
-      }
-    ]
-  },
-  {
-    path: '/student',
-    component: Layout,
-    meta: { requiresAuth: true, role: 'student' },
-    children: [
-      {
-        path: '',
-        name: 'StudentDashboard',
-        component: () => import('@/views/student/Dashboard.vue'),
-        meta: { title: '学生中心' }
-      }
-    ]
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('@/views/Contact.vue')
   },
   {
     path: '/login',
     name: 'Login',
     component: () => import('@/views/Login.vue')
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('@/views/Register.vue')
+  },
+  {
+    path: '/experts',
+    name: 'Experts',
+    component: () => import('@/views/experts/index.vue')
+  },
+  {
+    path: '/assessment',
+    name: 'Assessment',
+    component: () => import('@/views/assessment/index.vue')
+  },
+  {
+    path: '/education',
+    name: 'Education',
+    component: () => import('@/views/education/index.vue')
+  },
+  {
+    path: '/community',
+    name: 'Community',
+    component: () => import('@/views/community/index.vue')
+  },
+  {
+    path: '/admin',
+    component: () => import('@/layouts/AdminLayout.vue'),
+    meta: { roles: ['admin'] },
+    children: [
+      {
+        path: '',
+        redirect: 'dashboard'
+      },
+      {
+        path: 'dashboard',
+        name: 'AdminDashboard',
+        component: () => import('@/views/admin/dashboard/index.vue'),
+        meta: { title: '控制台' }
+      },
+      {
+        path: 'users',
+        name: 'UserManagement',
+        component: () => import('@/views/admin/users/index.vue'),
+        meta: { title: '用户管理' }
+      },
+      {
+        path: 'doctors',
+        name: 'DoctorManagement',
+        component: () => import('@/views/admin/doctors/index.vue'),
+        meta: { title: '医生管理' }
+      },
+      {
+        path: 'articles',
+        name: 'DoctorArticles',
+        component: () => import('@/views/admin/content/articles/index.vue'),
+        meta: { title: '文章管理' }
+      },
+      {
+        path: 'courses',
+        name: 'DoctorCourses',
+        component: () => import('@/views/admin/content/courses/index.vue'),
+        meta: { title: '课程管理' }
+      },
+      {
+        path: 'tests',
+        name: 'DoctorTests',
+        component: () => import('@/views/admin/content/tests/index.vue'),
+        meta: { title: '心理测试' }
+      },
+      {
+        path: 'community',
+        name: 'DoctorCommunity',
+        component: () => import('@/views/admin/community/index.vue'),
+        meta: { title: '社区管理' }
+      },
+      {
+        path: 'profile',
+        name: 'AdminProfile',
+        component: () => import('@/views/admin/profile/index.vue'),
+        meta: { title: '个人中心' }
+      } 
+    ]
+  },
+  {
+    path: '/doctor',
+    component: () => import('@/layouts/DoctorLayout.vue'),
+    meta: { roles: ['doctor'] },
+    children: [
+      {
+        path: '',
+        redirect: '/doctor/dashboard'
+      },
+      {
+        path: 'dashboard',
+        name: 'DoctorDashboard',
+        component: () => import('@/views/doctor/dashboard/index.vue'),
+        meta: { title: '工作台' }
+      },
+      {
+        path: 'appointments',
+        name: 'DoctorAppointments',
+        component: () => import('@/views/doctor/appointments/index.vue'),
+        meta: { title: '预约管理' }
+      },
+      {
+        path: 'consultations',
+        component: {
+          render: h => h('router-view')
+        },
+        children: [
+          {
+            path: 'sessions',
+            name: 'DoctorConsultationSessions',
+            component: () => import('@/views/doctor/consultations/sessions/index.vue'),
+            children: [
+              {
+                path: 'chat',
+                name: 'DoctorConsultationChat',
+                component: () => import('@/views/doctor/consultations/chat/index.vue'),
+                meta: { title: '会话' }
+              }
+            ]
+          },
+          {
+            path: 'records',
+            name: 'DoctorConsultationRecords',
+            component: () => import('@/views/doctor/consultations/records/index.vue')
+          },
+          {
+            path: 'resources',
+            name: 'DoctorConsultationResources',
+            component: () => import('@/views/doctor/consultations/resources/index.vue')
+          }
+        ]
+      },
+      {
+        path: 'articles',
+        name: 'DoctorArticles',
+        component: () => import('@/views/doctor/articles/index.vue'),
+        meta: { title: '文章管理' }
+      },
+      {
+        path: 'courses',
+        name: 'DoctorCourses',
+        component: () => import('@/views/doctor/courses/index.vue'),
+        meta: { title: '课程管理' }
+      },
+      {
+        path: 'tests',
+        name: 'DoctorTests',
+        component: () => import('@/views/doctor/tests/index.vue'),
+        meta: { title: '心理测试' }
+      },
+      {
+        path: 'profile',
+        name: 'DoctorProfile',
+        component: () => import('@/views/doctor/profile/index.vue'),
+        meta: { title: '个人中心' }
+      }
+    ]
+  },
+  {
+    path: '/user',
+    component: () => import('@/layouts/UserLayout.vue'),
+    meta: { roles: ['user'] },
+    children: [
+      {
+        path: 'profile',
+        name: 'UserProfile',
+        component: () => import('@/views/user/profile/index.vue'),
+        meta: { title: '个人中心' }
+      },
+      {
+        path: 'appointed',
+        name: 'UserAppointed',
+        component: () => import('@/views/user/appointed/index.vue'),
+        meta: { title: '预约记录' }
+      },
+      {
+        path: 'consultation',
+        name: 'UserConsultation',
+        component: () => import('@/views/user/consultation/index.vue'),
+        meta: { title: '咨询会话' },
+        children: [
+          {
+            path: 'chat',
+            name: 'UserConsultationChat',
+            component: () => import('@/views/user/chat/index.vue'),
+            meta: { title: '会话' }
+          }
+        ]
+      },
+      {
+        path: 'record',
+        name: 'UserRecord',
+        component: () => import('@/views/user/record/index.vue'),
+        meta: { title: '咨询记录' }
+      }
+    ]
   }
 ]
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: 'history',
   base: process.env.BASE_URL,
-  routes
-})
-
-router.beforeEach(async (to, from, next) => {
-  const isLoggedIn = store.getters['permission/isLoggedIn']
-  const userRole = store.getters['permission/userRole']
-
-  // 如果需要认证
-  if (to.matched.some(record => record.meta.requiresAuth)) {
-    if (!isLoggedIn) {
-      // 未登录，重定向到登录页
-      next({
-        path: '/login',
-        query: { redirect: to.fullPath }
-      })
-      return
-    }
-    
-    if (to.meta.role && to.meta.role !== userRole) {
-      // 角色不匹配，重定向到首页
-      next({ path: '/' })
-      return
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
     }
   }
-
-  // 已登录用户访问登录页，重定向到首页
-  if (isLoggedIn && to.path === '/login') {
-    next({ path: '/' })
-    return
-  }
-
-  next()
 })
 
 export default router

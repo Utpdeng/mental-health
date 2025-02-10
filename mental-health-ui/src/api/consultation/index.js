@@ -1,33 +1,20 @@
 import request from '@/utils/request'
 
-export function getConsultationList(doctorId, userId, appointmentId, form) {
+// 获取咨询列表
+export function getConsultationList(params) {
   return request({
     url: '/api/consultations/list',
     method: 'get',
     params: {
-      doctorId,
-      userId,
-      appointmentId,
-      form
+      appointedId: params.appointedId,
+      userId: params.userId,
+      doctorId: params.doctorId,
+      form: params.form
     }
   })
 }
 
-export function getConsultationById(id) {
-  return request({
-    url: `/api/consultations/${id}`,
-    method: 'get'
-  })
-}
-
-export function createAppointment(data) {
-  return request({
-    url: '/api/consultations/create',
-    method: 'post',
-    data
-  })
-}
-
+// 更新咨询反馈
 export function updateConsultation(id, feedback) {
   return request({
     url: '/api/consultations/update',
@@ -36,5 +23,21 @@ export function updateConsultation(id, feedback) {
       id,
       feedback
     }
+  })
+}
+
+// 获取咨询详情
+export function getConsultationById(id) {
+  return request({
+    url: `/api/consultations/${id}`,
+    method: 'get'
+  })
+} 
+
+export function createAppointment(data) {
+  return request({
+    url: '/api/consultations/create',
+    method: 'post',
+    data
   })
 }

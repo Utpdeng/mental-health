@@ -171,10 +171,10 @@ export default {
       this.loading = true
       try {
         const params = {
-          userId: userId,
+          userId: this.userId,
           form: form
         }
-
+        console.log(params);
         const res = await getConsultationList(params)
         if (res.status === '200') {
           this.sessions = res.data

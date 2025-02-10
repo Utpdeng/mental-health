@@ -5,7 +5,7 @@ import store from '@/store'
 // 创建 axios 实例
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API || '/api',
-  timeout: 5000,
+  timeout: 15000,
   headers: {
     'Content-Type': 'application/json'
   }
@@ -18,7 +18,7 @@ const whiteList = [
   '/api/experts',
   '/api/services',
   '/api/assessments',
-  '/api/education'
+  '/api/education',
 ]
 
 // 请求拦截器

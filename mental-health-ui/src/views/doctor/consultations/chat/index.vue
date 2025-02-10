@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import { getChatHistory } from '@/api/chat'
+import { getChatHistory } from '@/api/chat/index'
 import websocket from '@/websocket';
 export default {
   name: 'DoctorChat',

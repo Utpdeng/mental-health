@@ -50,6 +50,8 @@
 </template>
 
 <script>
+import { chatbot } from '@/api/chat'
+
 export default {
   name: 'AIChatBot',
   data() {
@@ -64,7 +66,8 @@ export default {
           fromBot: true,
           timestamp: new Date()
         }
-      ]
+      ],
+      loading: false
     }
   },
   methods: {
@@ -76,41 +79,58 @@ export default {
         })
       }
     },
-    sendMessage() {
-      if (!this.inputMessage.trim()) return
+    async sendMessage() {
+      if (!this.inputMessage.trim()) {
+        return
+      }
 
       // 添加用户消息
-      this.messages.push({
+      const userMessage = {
         id: Date.now(),
         content: this.inputMessage,
         fromBot: false,
         timestamp: new Date()
-      })
+      }
+      this.messages.push(userMessage)
+      this.scrollToBottom()
 
-      // TODO: 发送消息到后端AI接口
-      // const response = await sendToAI(this.inputMessage)
-      
-      // 模拟AI回复
-      setTimeout(() => {
-        this.messages.push({
+      const userInput = this.inputMessage
+      this.inputMessage = ''
+      this.loading = true
+
+      try {
+        // 调用后端API
+        const response = await chatbot(userInput)
+        console.log(response)
+        // 添加机器人回复
+        const botMessage = {
           id: Date.now() + 1,
-          content: '我收到了你的消息，但我还在学习中...',
+          content: response.data,
           fromBot: true,
           timestamp: new Date()
-        })
+        }
+        this.messages.push(botMessage)
         this.scrollToBottom()
-      }, 500)
-
-      this.inputMessage = ''
-      this.$nextTick(() => {
-        this.scrollToBottom()
-      })
+      } catch (error) {
+        // 发生错误时添加错误提示消息
+        const errorMessage = {
+          id: Date.now() + 1,
+          content: '服务器繁忙, 请稍后再试。',
+          fromBot: true,
+          timestamp: new Date()
+        }
+        this.messages.push(errorMessage)
+        console.error('AI回复错误:', error)
+      } finally {
+        this.loading = false
+      }
     },
     scrollToBottom() {
       const messageList = this.$refs.messageList
       messageList.scrollTop = messageList.scrollHeight
     },
-    formatTime(date) {
+    formatTime(timestamp) {
+      const date = new Date(timestamp)
       const hours = String(date.getHours()).padStart(2, '0')
       const minutes = String(date.getMinutes()).padStart(2, '0')
       return `${hours}:${minutes}`
@@ -256,5 +276,17 @@ export default {
 
 .chat-messages::-webkit-scrollbar-track {
   background: #f4f4f4;
+}
+
+/* 添加loading样式 */
+.message-bubble.loading::after {
+  content: '...';
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  0% { content: '.'; }
+  33% { content: '..'; }
+  66% { content: '...'; }
 }
 </style> 

@@ -27,7 +27,8 @@ public class JwtInterceptor implements HandlerInterceptor {
             "/api/users/register",
             "/api/articles/page",
             "/api/articles/*/detail",
-            "/error"
+            "/error",
+            "/api/chat/chatbot"
     );
 
     private final AntPathMatcher pathMatcher = new AntPathMatcher();
@@ -44,10 +45,11 @@ public class JwtInterceptor implements HandlerInterceptor {
         String token = request.getHeader("Authorization");
         if (token == null || !token.startsWith("Bearer ")) {
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            response.getWriter().write("please login");
-//            return false;
+//            response.getWriter().write("please login");
+            response.getOutputStream().write("{\"status\":\"401\",\"message\":\"token无效或已过期\"}".getBytes());
+            return false;
             // 放行所有
-            return true;
+//            return true;
         }
 
         try {
@@ -66,7 +68,8 @@ public class JwtInterceptor implements HandlerInterceptor {
         } catch (Exception e) {
             log.error("Token验证失败", e);
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            response.getWriter().write("{\"status\":\"401\",\"message\":\"token无效或已过期\"}");
+//            response.getWriter().write("{\"status\":\"401\",\"message\":\"token无效或已过期\"}");
+            response.getOutputStream().write("{\"status\":\"401\",\"message\":\"token无效或已过期\"}".getBytes());
             return false;
         }
     }

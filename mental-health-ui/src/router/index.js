@@ -58,9 +58,25 @@ const routes = [
     component: () => import('@/views/assessment/index.vue')
   },
   {
+    path: '/assessment/test/:id',
+    name: 'AssessmentTest',
+    component: () => import('@/views/assessment/test.vue'),
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/no-permission',
+    name: 'NoPermission',
+    component: () => import('@/views/NoPermission.vue')
+  },
+  {
     path: '/education',
     name: 'Education',
     component: () => import('@/views/education/index.vue')
+  },
+  {
+    path: '/education/article/:id',
+    name: 'ArticleDetail',
+    component: () => import('@/views/education/article.vue')
   },
   {
     path: '/community',

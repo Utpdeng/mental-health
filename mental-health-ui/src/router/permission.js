@@ -18,17 +18,32 @@ const whiteList = [
 
 // 角色权限映射
 const rolePermissions = {
-  admin: ['/admin'],  // admin可以访问/admin开头的路由
-  doctor: ['/doctor'], // doctor可以访问/doctor开头的路由
-  user: ['/user']     // user可以访问/user开头的路由
+  admin: ['/admin', '/assessment/test'],  // admin可以访问/admin开头的路由
+  doctor: ['/doctor', '/assessment/test'], // doctor可以访问/doctor开头的路由
+  user: ['/user', '/assessment/test']     // user可以访问/user开头的路由
+}
+
+// 添加动态路由白名单匹配函数
+function matchWhiteList(path) {
+  // 首先检查完全匹配
+  if (whiteList.includes(path)) {
+    return true;
+  }
+  
+  // 检查文章详情页路径 /education/article/任意ID
+  if (path.match(/^\/education\/article\/[a-zA-Z0-9]+$/)) {
+    return true;
+  }
+  
+  return false;
 }
 
 router.beforeEach((to, from, next) => {
   const token = store.state.user.token
   const role = store.state.user.role
 
-  // 在白名单中，直接通过
-  if (whiteList.includes(to.path)) {
+  // 使用新的白名单匹配函数
+  if (matchWhiteList(to.path)) {
     next()
     return
   }
@@ -64,7 +79,7 @@ router.beforeEach((to, from, next) => {
   const hasPermission = checkPermission(to.path, role)
   if (!hasPermission) {
     Message.error('无权访问该页面')
-    next(getDefaultPath(role)) // 重定向到对应角色的默认页面
+    next('/no-permission') // 重定向到无权限页面
     return
   }
 
@@ -79,7 +94,13 @@ function checkPermission(path, role) {
   }
   
   // 检查路径是否以该角色允许的前缀开头
-  return rolePermissions[role].some(prefix => path.startsWith(prefix))
+  return rolePermissions[role].some(prefix => {
+    // 对于 /assessment/test 路径，需要特殊处理以支持 /assessment/test/1, /assessment/test/2 等
+    if (prefix === '/assessment/test' && path.startsWith('/assessment/test/')) {
+      return true
+    }
+    return path.startsWith(prefix)
+  })
 }
 
 // 获取角色默认页面

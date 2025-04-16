@@ -1,4 +1,4 @@
-<!-- 将之前的 Experts.vue 内容移到这里 --> <template>
+ <template>
   <div class="experts-page">
     <div class="page-header">
       <div class="container">
@@ -34,10 +34,82 @@
         </el-row>
       </div>
     </div>
+
+    <!-- 预约弹窗 -->
+    <el-dialog
+      title="预约咨询"
+      :visible.sync="dialogVisible"
+      width="600px"
+      :before-close="handleClose">
+      <div v-if="selectedExpert">
+        <div class="appointment-expert-info">
+          <div class="expert-avatar-small">
+            <img :src="selectedExpert.avatar" :alt="selectedExpert.name">
+          </div>
+          <div class="expert-info">
+            <h3>{{ selectedExpert.name }}</h3>
+            <p>{{ selectedExpert.title }} | 擅长：{{ selectedExpert.specialty }}</p>
+          </div>
+        </div>
+        
+        <div class="appointment-form">
+          <h4>选择预约时间</h4>
+          <div class="date-picker-container">
+            <div class="date-selector">
+              <p>日期</p>
+              <el-date-picker
+                v-model="appointmentDate"
+                type="date"
+                placeholder="选择日期"
+                :picker-options="dateOptions">
+              </el-date-picker>
+            </div>
+            
+            <div class="time-selector">
+              <p>时间段</p>
+              <el-select v-model="appointmentTime" placeholder="选择时间段">
+                <el-option
+                  v-for="item in timeSlots"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                  :disabled="item.disabled">
+                </el-option>
+              </el-select>
+            </div>
+          </div>
+          
+          <div class="appointment-type">
+            <h4>咨询方式</h4>
+            <el-radio-group v-model="consultationType">
+              <el-radio :label="1">在线视频</el-radio>
+              <el-radio :label="2">语音通话</el-radio>
+              <el-radio :label="3">面对面咨询</el-radio>
+            </el-radio-group>
+          </div>
+          
+          <div class="appointment-remark">
+            <h4>咨询说明</h4>
+            <el-input
+              type="textarea"
+              :rows="4"
+              placeholder="请简单描述您需要咨询的问题"
+              v-model="consultationRemark">
+            </el-input>
+          </div>
+        </div>
+      </div>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="submitAppointment">确 定</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'Experts',
   data() {
@@ -79,12 +151,81 @@ export default {
           cases: 1800,
           avatar: 'https://picsum.photos/400/2017'
         }
-      ]
+      ],
+      dialogVisible: false,
+      selectedExpert: null,
+      appointmentDate: '',
+      appointmentTime: '',
+      consultationType: 1,
+      consultationRemark: '',
+      timeSlots: [
+        { value: '09:00-10:00', label: '09:00-10:00', disabled: false },
+        { value: '10:00-11:00', label: '10:00-11:00', disabled: false },
+        { value: '11:00-12:00', label: '11:00-12:00', disabled: false },
+        { value: '14:00-15:00', label: '14:00-15:00', disabled: false },
+        { value: '15:00-16:00', label: '15:00-16:00', disabled: false },
+        { value: '16:00-17:00', label: '16:00-17:00', disabled: false }
+      ],
+      dateOptions: {
+        disabledDate(time) {
+          // 禁用过去的日期和30天后的日期
+          return time.getTime() < Date.now() - 8.64e7 || time.getTime() > Date.now() + 30 * 8.64e7
+        }
+      }
     }
+  },
+  computed: {
+    ...mapState('user', ['token'])
   },
   methods: {
     bookConsultation(expert) {
-      this.$message.success(`预约${expert.name}咨询成功！我们会尽快与您联系。`)
+      if (!this.token) {
+        this.$confirm('请先登录后再进行预约', '提示', {
+          confirmButtonText: '去登录',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.$router.push({
+            path: '/login',
+            query: { redirect: this.$route.fullPath }
+          })
+        }).catch(() => {
+          // 用户取消操作
+        })
+      } else {
+        this.selectedExpert = expert
+        this.dialogVisible = true
+      }
+    },
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+        .then(_ => {
+          done()
+        })
+        .catch(_ => {})
+    },
+    submitAppointment() {
+      if (!this.appointmentDate) {
+        this.$message.error('请选择预约日期')
+        return
+      }
+      if (!this.appointmentTime) {
+        this.$message.error('请选择预约时间段')
+        return
+      }
+
+      // 这里是前端模拟，实际项目中会调用API
+      setTimeout(() => {
+        this.$message.success(`预约${this.selectedExpert.name}咨询成功！我们会尽快与您联系。`)
+        this.dialogVisible = false
+        this.resetForm()
+      }, 500)
+    },
+    resetForm() {
+      this.appointmentDate = ''
+      this.appointmentTime = ''
+      this.consultationType = 1
+      this.consultationRemark = ''
     }
   }
 }
@@ -166,5 +307,60 @@ export default {
 .el-button {
   width: 100%;
   margin-top: 15px;
+}
+
+/* 预约弹窗样式 */
+.appointment-expert-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.expert-avatar-small {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.expert-avatar-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.expert-info h3 {
+  margin: 0 0 5px 0;
+}
+
+.expert-info p {
+  margin: 0;
+  color: #666;
+}
+
+.appointment-form h4 {
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+.date-picker-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.date-selector, .time-selector {
+  width: 50%;
+}
+
+.appointment-type, .appointment-remark {
+  margin-top: 20px;
+}
+
+.el-select {
+  width: 100%;
 }
 </style> 

@@ -33,6 +33,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'Assessment',
   data() {
@@ -89,9 +91,31 @@ export default {
       ]
     }
   },
+  computed: {
+    ...mapState('user', ['token'])
+  },
   methods: {
     startTest(test) {
-      this.$message.success(`即将开始${test.title}，请保持良好的心态。`)
+      if (!this.token) {
+        this.$confirm('请先登录后再进行心理测评', '提示', {
+          confirmButtonText: '去登录',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.$router.push({
+            path: '/login',
+            query: { redirect: this.$route.fullPath }
+          })
+        }).catch(() => {
+          // 用户取消操作
+        })
+      } else {
+        // 跳转到测评页面
+        this.$router.push({
+          path: `/assessment/test/${test.id}`,
+          query: { title: test.title }
+        })
+      }
     }
   }
 }

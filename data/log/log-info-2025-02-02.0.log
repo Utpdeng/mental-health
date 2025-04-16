@@ -1,0 +1,864 @@
+25-02-02.14:15:01.926 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 17464 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-02-02.14:15:01.928 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-02-02.14:15:01.928 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-02-02.14:15:02.535 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-02-02.14:15:02.551 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+25-02-02.14:15:03.173 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-02-02.14:15:03.174 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-02-02.14:15:03.174 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-02-02.14:15:03.175 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-02-02.14:15:03.190 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-02-02.14:15:03.199 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-02-02.14:15:03.200 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-02-02.14:15:03.200 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-02-02.14:15:03.407 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-02-02.14:15:03.407 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1425 ms
+25-02-02.14:15:04.150 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@168142da]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-02-02.14:15:04.159 [cluster-rtt-ClusterId{value='679f0d68ae51f42b8ca0aecd', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
+25-02-02.14:15:04.159 [cluster-ClusterId{value='679f0d68ae51f42b8ca0aecd', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+25-02-02.14:15:04.159 [cluster-ClusterId{value='679f0d68ae51f42b8ca0aecd', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=22046000}
+25-02-02.14:15:05.150 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-02-02.14:15:05.174 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-02-02.14:15:05.186 [main            ] INFO  App                    - Started App in 3.786 seconds (JVM running for 5.89)
+25-02-02.14:15:37.570 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-02-02.14:15:37.570 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-02-02.14:15:37.571 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-02-02.14:15:37.640 [http-nio-8090-exec-1] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-02-02.14:15:37.645 [http-nio-8090-exec-1] INFO  UserService            - 用户登录，用户名：zs
+25-02-02.14:15:37.660 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-02-02.14:15:38.682 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-02-02.14:15:38.763 [http-nio-8090-exec-1] INFO  UserService            - 用户登录成功，用户ID：2
+25-02-02.14:15:38.806 [http-nio-8090-exec-2] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.14:15:38.812 [http-nio-8090-exec-2] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.14:16:00.236 [http-nio-8090-exec-3] INFO  connection             - Opened connection [connectionId{localValue:3, serverValue:3}] to localhost:27017
+25-02-02.14:19:15.499 [http-nio-8090-exec-5] INFO  AppointmentController  - 收到查询预约列表请求，用户ID：null，医生ID：2，状态：
+25-02-02.14:19:15.502 [http-nio-8090-exec-5] INFO  AppointmentService     - 查询预约列表，用户ID：null，医生ID：2，状态：
+25-02-02.14:19:17.699 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:19:18.029 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:19:19.109 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:19:20.288 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:19:20.614 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:27:56.397 [http-nio-8090-exec-4] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.14:27:56.398 [http-nio-8090-exec-4] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.14:27:56.450 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:27:56.458 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:28:26.793 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:28:27.633 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:28:27.951 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:28:37.831 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:28:38.079 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:28:42.498 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:28:43.166 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:28:43.478 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:28:48.939 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:28:49.204 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:30:36.561 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:30:36.573 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:32:03.548 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:32:04.182 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:32:04.499 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:33:02.414 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:33:03.258 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:33:03.579 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:33:31.373 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:33:35.805 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:33:36.118 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:34:12.600 [http-nio-8090-exec-6] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.14:34:12.601 [http-nio-8090-exec-6] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.14:34:12.644 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:34:12.698 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:43:56.105 [http-nio-8090-exec-10] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.14:43:56.106 [http-nio-8090-exec-10] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.14:45:32.029 [http-nio-8090-exec-1] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.14:45:32.030 [http-nio-8090-exec-1] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.14:45:32.126 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:45:32.153 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:46:01.332 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:46:01.341 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:46:07.586 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:46:07.592 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:46:53.946 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:46:54.075 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:47:05.882 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:47:06.540 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:47:06.809 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:47:06.983 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:47:08.777 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.14:47:09.028 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:11:52.330 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-02-02.15:11:52.337 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-02-02.15:12:01.517 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 8004 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-02-02.15:12:01.519 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-02-02.15:12:01.519 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-02-02.15:12:01.973 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-02-02.15:12:01.986 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+25-02-02.15:12:02.351 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-02-02.15:12:02.351 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-02-02.15:12:02.352 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-02-02.15:12:02.352 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-02-02.15:12:02.354 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-02-02.15:12:02.360 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-02-02.15:12:02.360 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-02-02.15:12:02.360 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-02-02.15:12:02.497 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-02-02.15:12:02.497 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 934 ms
+25-02-02.15:12:02.866 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@217dc48e]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-02-02.15:12:02.872 [cluster-rtt-ClusterId{value='679f1ac27482b27d4fb91113', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:8}] to localhost:27017
+25-02-02.15:12:02.872 [cluster-ClusterId{value='679f1ac27482b27d4fb91113', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:7}] to localhost:27017
+25-02-02.15:12:02.873 [cluster-ClusterId{value='679f1ac27482b27d4fb91113', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15017600}
+25-02-02.15:12:03.371 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-02-02.15:12:03.379 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-02-02.15:12:03.410 [main            ] ERROR SpringApplication      - Application run failed
+java.lang.IllegalStateException: Failed to register @ServerEndpoint class: class com.dil.chat.server.WebSocketServer
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.registerEndpoint(ServerEndpointExporter.java:159)
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.registerEndpoints(ServerEndpointExporter.java:134)
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.afterSingletonsInstantiated(ServerEndpointExporter.java:112)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:974)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.dil.App.main(App.java:19)
+Caused by: javax.websocket.DeploymentException: No payload parameter present on the method [onMessage] of class [com.dil.chat.server.WebSocketServer] that was annotated with OnMessage
+	at org.apache.tomcat.websocket.pojo.PojoMethodMapping$MessageHandlerInfo.<init>(PojoMethodMapping.java:546)
+	at org.apache.tomcat.websocket.pojo.PojoMethodMapping.<init>(PojoMethodMapping.java:159)
+	at org.apache.tomcat.websocket.server.WsServerContainer.addEndpoint(WsServerContainer.java:142)
+	at org.apache.tomcat.websocket.server.WsServerContainer.addEndpoint(WsServerContainer.java:252)
+	at org.apache.tomcat.websocket.server.WsServerContainer.addEndpoint(WsServerContainer.java:210)
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.registerEndpoint(ServerEndpointExporter.java:156)
+	... 12 common frames omitted
+25-02-02.15:15:16.700 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 14216 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-02-02.15:15:16.702 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-02-02.15:15:16.703 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-02-02.15:15:17.138 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-02-02.15:15:17.152 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+25-02-02.15:15:17.505 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-02-02.15:15:17.505 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-02-02.15:15:17.505 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-02-02.15:15:17.505 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-02-02.15:15:17.508 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-02-02.15:15:17.513 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-02-02.15:15:17.514 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-02-02.15:15:17.514 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-02-02.15:15:17.640 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-02-02.15:15:17.640 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 895 ms
+25-02-02.15:15:18.028 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@580902cd]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-02-02.15:15:18.037 [cluster-rtt-ClusterId{value='679f1b856a94620ddb81a5f9', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:9}] to localhost:27017
+25-02-02.15:15:18.037 [cluster-ClusterId{value='679f1b856a94620ddb81a5f9', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:10}] to localhost:27017
+25-02-02.15:15:18.037 [cluster-ClusterId{value='679f1b856a94620ddb81a5f9', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=18871400}
+25-02-02.15:15:18.528 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-02-02.15:15:18.536 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-02-02.15:15:18.554 [main            ] ERROR SpringApplication      - Application run failed
+java.lang.IllegalStateException: Failed to register @ServerEndpoint class: class com.dil.chat.server.WebSocketServer
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.registerEndpoint(ServerEndpointExporter.java:159)
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.registerEndpoints(ServerEndpointExporter.java:134)
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.afterSingletonsInstantiated(ServerEndpointExporter.java:112)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:974)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.dil.App.main(App.java:19)
+Caused by: javax.websocket.DeploymentException: No Throwable parameter was present on the method [onError] of class [com.dil.chat.server.WebSocketServer] that was annotated with OnError
+	at org.apache.tomcat.websocket.pojo.PojoMethodMapping.getPathParams(PojoMethodMapping.java:330)
+	at org.apache.tomcat.websocket.pojo.PojoMethodMapping.<init>(PojoMethodMapping.java:213)
+	at org.apache.tomcat.websocket.server.WsServerContainer.addEndpoint(WsServerContainer.java:142)
+	at org.apache.tomcat.websocket.server.WsServerContainer.addEndpoint(WsServerContainer.java:252)
+	at org.apache.tomcat.websocket.server.WsServerContainer.addEndpoint(WsServerContainer.java:210)
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.registerEndpoint(ServerEndpointExporter.java:156)
+	... 12 common frames omitted
+25-02-02.15:16:41.396 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 10156 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-02-02.15:16:41.398 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-02-02.15:16:41.398 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-02-02.15:16:41.824 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-02-02.15:16:41.839 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+25-02-02.15:16:42.193 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-02-02.15:16:42.194 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-02-02.15:16:42.194 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-02-02.15:16:42.194 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-02-02.15:16:42.196 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-02-02.15:16:42.202 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-02-02.15:16:42.203 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-02-02.15:16:42.203 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-02-02.15:16:42.329 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-02-02.15:16:42.329 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 889 ms
+25-02-02.15:16:42.696 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@580902cd]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-02-02.15:16:42.702 [cluster-rtt-ClusterId{value='679f1bda04d0f455b92a3f55', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:11}] to localhost:27017
+25-02-02.15:16:42.702 [cluster-ClusterId{value='679f1bda04d0f455b92a3f55', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:12}] to localhost:27017
+25-02-02.15:16:42.702 [cluster-ClusterId{value='679f1bda04d0f455b92a3f55', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15363400}
+25-02-02.15:16:43.180 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-02-02.15:16:43.194 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-02-02.15:16:43.201 [main            ] INFO  App                    - Started App in 2.172 seconds (JVM running for 3.378)
+25-02-02.15:17:14.945 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-02-02.15:17:14.945 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-02-02.15:17:14.946 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-02-02.15:17:56.402 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:17:56.444 [http-nio-8090-exec-2] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-02-02.15:17:56.645 [http-nio-8090-exec-2] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-02-02.15:17:56.711 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:17:57.034 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:19:48.037 [http-nio-8090-exec-9] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:19:56.025 [http-nio-8090-exec-7] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:19:56.029 [http-nio-8090-exec-1] INFO  WebSocketServer        - WebSocket closed
+25-02-02.15:19:58.559 [http-nio-8090-exec-4] INFO  WebSocketServer        - WebSocket closed
+25-02-02.15:19:58.570 [http-nio-8090-exec-2] INFO  Http11Processor        - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [//websocket/message?sessionId={this.sessionId} ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:482)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+25-02-02.15:20:08.804 [http-nio-8090-exec-5] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.15:20:08.813 [http-nio-8090-exec-5] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.15:20:09.073 [http-nio-8090-exec-6] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:20:09.091 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:20:09.103 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:20:24.389 [http-nio-8090-exec-9] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:20:24.392 [http-nio-8090-exec-7] INFO  WebSocketServer        - WebSocket closed
+25-02-02.15:20:30.159 [http-nio-8090-exec-1] INFO  WebSocketServer        - WebSocket closed
+25-02-02.15:20:30.581 [http-nio-8090-exec-4] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.15:20:30.582 [http-nio-8090-exec-4] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.15:20:30.806 [http-nio-8090-exec-2] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:20:30.825 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:20:30.835 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:21:03.992 [http-nio-8090-exec-6] INFO  WebSocketServer        - WebSocket closed
+25-02-02.15:21:07.023 [http-nio-8090-exec-10] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:23:54.549 [http-nio-8090-exec-8] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:23:54.551 [http-nio-8090-exec-9] INFO  WebSocketServer        - WebSocket closed
+25-02-02.15:23:54.560 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:23:54.804 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:23:56.928 [http-nio-8090-exec-4] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:23:56.931 [http-nio-8090-exec-2] INFO  WebSocketServer        - WebSocket closed
+25-02-02.15:23:56.939 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:23:56.949 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:23:58.362 [http-nio-8090-exec-6] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:23:58.365 [http-nio-8090-exec-10] INFO  WebSocketServer        - WebSocket closed
+25-02-02.15:23:58.373 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:23:58.621 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:24:00.458 [http-nio-8090-exec-7] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:24:00.460 [http-nio-8090-exec-1] INFO  WebSocketServer        - WebSocket closed
+25-02-02.15:24:00.468 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:24:00.478 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:24:12.558 [http-nio-8090-exec-3] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:24:12.561 [http-nio-8090-exec-5] INFO  WebSocketServer        - WebSocket closed
+25-02-02.15:24:38.253 [http-nio-8090-exec-6] INFO  WebSocketServer        - WebSocket closed
+25-02-02.15:24:38.661 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:24:39.033 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:24:39.344 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:24:46.445 [http-nio-8090-exec-7] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:25:34.165 [http-nio-8090-exec-1] INFO  WebSocketServer        - WebSocket closed
+25-02-02.15:25:34.490 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:25:34.980 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:25:35.298 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:26:16.951 [http-nio-8090-exec-8] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.15:26:16.952 [http-nio-8090-exec-8] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.15:26:17.168 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:26:17.259 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:28:10.913 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:28:11.469 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:28:11.794 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:29:33.477 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:29:33.771 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:29:56.191 [http-nio-8090-exec-7] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-02-02.15:29:56.191 [http-nio-8090-exec-7] INFO  UserService            - 用户登录，用户名：zs
+25-02-02.15:29:56.197 [http-nio-8090-exec-7] INFO  UserService            - 用户登录成功，用户ID：2
+25-02-02.15:29:56.426 [http-nio-8090-exec-1] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.15:29:56.427 [http-nio-8090-exec-1] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.15:30:04.849 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:30:04.857 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:35:47.302 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:35:47.597 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.15:36:04.010 [http-nio-8090-exec-8] INFO  WebSocketServer        - WebSocket opened
+25-02-02.15:36:21.542 [http-nio-8090-exec-9] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:15:09.602 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m43s589ms746µs100ns).
+25-02-02.16:18:52.433 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:18:52.433 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:11.586 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:11.835 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:14.205 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:14.212 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:14.219 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:14.536 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:16.666 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:16.918 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:25.627 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:25.634 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:28.583 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:30.163 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:37.701 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:19:40.537 [http-nio-8090-exec-6] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:19:58.845 [http-nio-8090-exec-10] INFO  WebSocketServer        - Received message from sessionId: null
+25-02-02.16:21:12.361 [http-nio-8090-exec-8] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:21:34.508 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:22:10.829 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:22:11.125 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:22:33.631 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:22:33.928 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:22:52.527 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:22:52.818 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:23:18.624 [http-nio-8090-exec-6] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:23:20.834 [http-nio-8090-exec-10] INFO  WebSocketServer        - Received message from sessionId: null
+25-02-02.16:23:36.999 [http-nio-8090-exec-8] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:23:36.999 [http-nio-8090-exec-9] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:23:37.006 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:23:37.304 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:23:40.935 [http-nio-8090-exec-1] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:23:46.826 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:24:09.088 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:24:09.334 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:24:11.551 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:24:11.558 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:24:13.043 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:24:13.275 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:24:21.824 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:24:21.832 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:24:57.088 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:24:57.321 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:25:09.620 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:25:09.628 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:25:13.411 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:25:13.650 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:25:14.689 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:25:14.697 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:25:20.717 [http-nio-8090-exec-7] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:26:01.676 [http-nio-8090-exec-4] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:26:01.679 [http-nio-8090-exec-1] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:26:01.684 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:01.913 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:12.418 [http-nio-8090-exec-5] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:26:12.419 [http-nio-8090-exec-6] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:26:12.424 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:12.432 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:13.860 [http-nio-8090-exec-9] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:26:13.862 [http-nio-8090-exec-7] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:26:13.868 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:14.090 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:16.843 [http-nio-8090-exec-2] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:26:16.848 [http-nio-8090-exec-3] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:26:16.860 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:16.867 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:19.404 [http-nio-8090-exec-10] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:26:19.406 [http-nio-8090-exec-8] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:26:19.414 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:19.663 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:24.542 [http-nio-8090-exec-4] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:26:25.324 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:25.704 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:26.025 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:26:26.534 [http-nio-8090-exec-5] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:26:28.790 [http-nio-8090-exec-6] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:27:39.618 [http-nio-8090-exec-10] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:27:41.496 [http-nio-8090-exec-8] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:28:02.298 [http-nio-8090-exec-9] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:28:03.356 [http-nio-8090-exec-7] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:28:26.416 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:28:44.631 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:28:45.682 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:28:45.999 [http-nio-8090-exec-3] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:28:46.474 [http-nio-8090-exec-5] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:28:47.793 [http-nio-8090-exec-6] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:39:41.506 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 24424 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-02-02.16:39:41.508 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-02-02.16:39:41.509 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-02-02.16:39:42.041 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-02-02.16:39:42.056 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 MongoDB repository interfaces.
+25-02-02.16:39:42.445 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-02-02.16:39:42.446 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-02-02.16:39:42.446 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-02-02.16:39:42.446 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-02-02.16:39:42.449 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-02-02.16:39:42.455 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-02-02.16:39:42.456 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-02-02.16:39:42.456 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-02-02.16:39:42.586 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-02-02.16:39:42.586 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1032 ms
+25-02-02.16:39:42.961 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@f245bdd]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-02-02.16:39:42.967 [cluster-rtt-ClusterId{value='679f2f4e8548b17c35ae6db5', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:13}] to localhost:27017
+25-02-02.16:39:42.967 [cluster-ClusterId{value='679f2f4e8548b17c35ae6db5', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:14}] to localhost:27017
+25-02-02.16:39:42.967 [cluster-ClusterId{value='679f2f4e8548b17c35ae6db5', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15509800}
+25-02-02.16:39:43.462 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-02-02.16:39:43.476 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-02-02.16:39:43.483 [main            ] INFO  App                    - Started App in 2.378 seconds (JVM running for 4.026)
+25-02-02.16:40:00.968 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 22872 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-02-02.16:40:00.970 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-02-02.16:40:00.970 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-02-02.16:40:01.430 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-02-02.16:40:01.444 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+25-02-02.16:40:01.846 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-02-02.16:40:01.847 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-02-02.16:40:01.847 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-02-02.16:40:01.847 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-02-02.16:40:01.850 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-02-02.16:40:01.855 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-02-02.16:40:01.855 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-02-02.16:40:01.856 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-02-02.16:40:01.981 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-02-02.16:40:01.981 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 965 ms
+25-02-02.16:40:02.379 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@5e599100]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-02-02.16:40:02.385 [cluster-rtt-ClusterId{value='679f2f62d4b89666ced3a5db', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:15}] to localhost:27017
+25-02-02.16:40:02.385 [cluster-ClusterId{value='679f2f62d4b89666ced3a5db', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:16}] to localhost:27017
+25-02-02.16:40:02.385 [cluster-ClusterId{value='679f2f62d4b89666ced3a5db', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=14702200}
+25-02-02.16:40:02.875 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-02-02.16:40:02.890 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-02-02.16:40:02.896 [main            ] INFO  App                    - Started App in 2.31 seconds (JVM running for 3.526)
+25-02-02.16:40:04.138 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-02-02.16:40:04.138 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-02-02.16:40:04.139 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-02-02.16:40:04.176 [http-nio-8090-exec-1] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:41:15.905 [http-nio-8090-exec-2] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:41:16.710 [http-nio-8090-exec-3] INFO  connection             - Opened connection [connectionId{localValue:3, serverValue:17}] to localhost:27017
+25-02-02.16:43:20.305 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:43:20.349 [http-nio-8090-exec-5] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-02-02.16:43:20.542 [http-nio-8090-exec-5] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-02-02.16:43:20.596 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.16:43:21.759 [http-nio-8090-exec-7] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:43:29.384 [http-nio-8090-exec-8] INFO  WebSocketServer        - Received message from sessionId: null
+25-02-02.16:43:30.665 [http-nio-8090-exec-10] INFO  WebSocketServer        - Received message from sessionId: null
+25-02-02.16:43:31.393 [http-nio-8090-exec-1] INFO  WebSocketServer        - Received message from sessionId: null
+25-02-02.16:43:31.556 [http-nio-8090-exec-2] INFO  WebSocketServer        - Received message from sessionId: null
+25-02-02.16:43:46.268 [http-nio-8090-exec-3] INFO  WebSocketServer        - Received message from sessionId: null
+25-02-02.16:45:33.779 [http-nio-8090-exec-4] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:45:34.934 [http-nio-8090-exec-5] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:57:18.108 [http-nio-8090-exec-7] INFO  WebSocketServer        - WebSocket closed
+25-02-02.16:57:19.240 [http-nio-8090-exec-9] INFO  WebSocketServer        - WebSocket opened
+25-02-02.16:57:22.234 [http-nio-8090-exec-10] INFO  WebSocketServer        - Received message from sessionId: null
+25-02-02.16:57:24.360 [http-nio-8090-exec-1] INFO  WebSocketServer        - Received message from sessionId: null
+25-02-02.17:49:46.881 [http-nio-8090-exec-2] INFO  WebSocketServer        - WebSocket error
+25-02-02.17:49:46.882 [http-nio-8090-exec-2] INFO  WebSocketServer        - WebSocket closed
+25-02-02.18:12:23.666 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=23m2s94ms761µs600ns).
+25-02-02.18:12:42.179 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-02-02.18:12:42.186 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-02-02.21:52:11.878 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 1984 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-02-02.21:52:11.881 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-02-02.21:52:11.882 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-02-02.21:52:12.611 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-02-02.21:52:12.632 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 MongoDB repository interfaces.
+25-02-02.21:52:13.147 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-02-02.21:52:13.147 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-02-02.21:52:13.148 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-02-02.21:52:13.148 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-02-02.21:52:13.161 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-02-02.21:52:13.169 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-02-02.21:52:13.169 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-02-02.21:52:13.169 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-02-02.21:52:13.317 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-02-02.21:52:13.317 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1363 ms
+25-02-02.21:52:13.793 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@1961d75a]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-02-02.21:52:14.461 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-02-02.21:52:14.479 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-02-02.21:52:14.488 [main            ] INFO  App                    - Started App in 3.191 seconds (JVM running for 10.083)
+25-02-02.21:52:15.840 [cluster-ClusterId{value='679f788d4530c128078e41b8', description='null'}-localhost:27017] INFO  cluster                - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+25-02-02.21:52:25.849 [cluster-ClusterId{value='679f788d4530c128078e41b8', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:4, serverValue:2}] to localhost:27017
+25-02-02.21:52:25.849 [cluster-rtt-ClusterId{value='679f788d4530c128078e41b8', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:3, serverValue:1}] to localhost:27017
+25-02-02.21:52:25.849 [cluster-ClusterId{value='679f788d4530c128078e41b8', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3187900}
+25-02-02.21:52:32.492 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 13844 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-02-02.21:52:32.494 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-02-02.21:52:32.494 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-02-02.21:52:32.972 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-02-02.21:52:32.988 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 MongoDB repository interfaces.
+25-02-02.21:52:33.360 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-02-02.21:52:33.361 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-02-02.21:52:33.361 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-02-02.21:52:33.361 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-02-02.21:52:33.363 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-02-02.21:52:33.369 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-02-02.21:52:33.369 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-02-02.21:52:33.369 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-02-02.21:52:33.502 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-02-02.21:52:33.502 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 962 ms
+25-02-02.21:52:33.884 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@3b35798]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-02-02.21:52:33.890 [cluster-ClusterId{value='679f78a1cf0b9e6a6be31cbd', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:3}] to localhost:27017
+25-02-02.21:52:33.890 [cluster-rtt-ClusterId{value='679f78a1cf0b9e6a6be31cbd', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:4}] to localhost:27017
+25-02-02.21:52:33.891 [cluster-ClusterId{value='679f78a1cf0b9e6a6be31cbd', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15879800}
+25-02-02.21:52:34.395 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-02-02.21:52:34.408 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-02-02.21:52:34.415 [main            ] INFO  App                    - Started App in 2.315 seconds (JVM running for 3.664)
+25-02-02.21:53:13.058 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-02-02.21:53:13.058 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-02-02.21:53:13.059 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-02-02.21:53:13.126 [http-nio-8090-exec-1] INFO  UserController         - 收到用户登录请求，用户名：zs
+25-02-02.21:53:13.130 [http-nio-8090-exec-1] INFO  UserService            - 用户登录，用户名：zs
+25-02-02.21:53:13.145 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-02-02.21:53:14.077 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-02-02.21:53:14.153 [http-nio-8090-exec-1] INFO  UserService            - 用户登录成功，用户ID：2
+25-02-02.21:53:14.195 [http-nio-8090-exec-3] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.21:53:14.201 [http-nio-8090-exec-3] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.21:53:16.495 [http-nio-8090-exec-2] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.21:53:16.529 [http-nio-8090-exec-4] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.21:53:41.729 [http-nio-8090-exec-5] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.21:55:32.374 [http-nio-8090-exec-9] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.21:55:32.375 [http-nio-8090-exec-9] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.21:55:32.592 [http-nio-8090-exec-10] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.21:55:32.606 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.21:55:39.923 [http-nio-8090-exec-7] ERROR GlobalExceptionHandler - 系统异常
+java.lang.NullPointerException: null
+	at com.dil.chat.controller.ChatController.getChatHistory(ChatController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+25-02-02.21:55:39.940 [http-nio-8090-exec-6] INFO  ChatMessageHandler     - 用户 3 加入房间 2
+25-02-02.21:56:58.047 [SpringApplicationShutdownHook] INFO  ChatMessageHandler     - 用户 3 离开房间 2
+25-02-02.21:56:58.055 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-02-02.21:56:58.060 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-02-02.21:57:04.558 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 12200 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-02-02.21:57:04.560 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-02-02.21:57:04.561 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-02-02.21:57:05.014 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-02-02.21:57:05.029 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 MongoDB repository interfaces.
+25-02-02.21:57:05.382 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-02-02.21:57:05.382 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-02-02.21:57:05.382 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-02-02.21:57:05.383 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-02-02.21:57:05.385 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-02-02.21:57:05.390 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-02-02.21:57:05.391 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-02-02.21:57:05.391 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-02-02.21:57:05.512 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-02-02.21:57:05.513 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 909 ms
+25-02-02.21:57:05.871 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@7b351446]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-02-02.21:57:05.877 [cluster-ClusterId{value='679f79b1dcc3ad3ee719f38d', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:5}] to localhost:27017
+25-02-02.21:57:05.877 [cluster-rtt-ClusterId{value='679f79b1dcc3ad3ee719f38d', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:6}] to localhost:27017
+25-02-02.21:57:05.877 [cluster-ClusterId{value='679f79b1dcc3ad3ee719f38d', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=14741600}
+25-02-02.21:57:06.376 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-02-02.21:57:06.390 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-02-02.21:57:06.397 [main            ] INFO  App                    - Started App in 2.207 seconds (JVM running for 3.403)
+25-02-02.21:57:22.232 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-02-02.21:57:22.232 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-02-02.21:57:22.233 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-02-02.21:57:23.026 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.21:57:23.058 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-02-02.21:57:23.283 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-02-02.21:57:36.334 [http-nio-8090-exec-3] ERROR GlobalExceptionHandler - 系统异常
+java.lang.NullPointerException: null
+	at com.dil.chat.controller.ChatController.getChatHistory(ChatController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+25-02-02.21:57:36.354 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 用户 3 加入房间 2
+25-02-02.21:58:43.462 [SpringApplicationShutdownHook] INFO  ChatMessageHandler     - 用户 3 离开房间 2
+25-02-02.21:58:43.470 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-02-02.21:58:43.478 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-02-02.21:58:49.890 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 12744 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-02-02.21:58:49.892 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-02-02.21:58:49.892 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-02-02.21:58:50.362 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-02-02.21:58:50.376 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+25-02-02.21:58:50.726 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-02-02.21:58:50.727 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-02-02.21:58:50.727 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-02-02.21:58:50.727 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-02-02.21:58:50.729 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-02-02.21:58:50.735 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-02-02.21:58:50.736 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-02-02.21:58:50.736 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-02-02.21:58:50.859 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-02-02.21:58:50.859 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 922 ms
+25-02-02.21:58:51.211 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@7889b4b9]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-02-02.21:58:51.217 [cluster-rtt-ClusterId{value='679f7a1b566c5124f70b8c7e', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:8}] to localhost:27017
+25-02-02.21:58:51.217 [cluster-ClusterId{value='679f7a1b566c5124f70b8c7e', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:7}] to localhost:27017
+25-02-02.21:58:51.217 [cluster-ClusterId{value='679f7a1b566c5124f70b8c7e', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=14417600}
+25-02-02.21:58:51.714 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-02-02.21:58:51.728 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-02-02.21:58:51.735 [main            ] INFO  App                    - Started App in 2.213 seconds (JVM running for 3.417)
+25-02-02.21:58:58.894 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-02-02.21:58:58.894 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-02-02.21:58:58.895 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-02-02.21:58:58.934 [http-nio-8090-exec-1] INFO  ChatMessageHandler     - 用户 3 加入房间 2
+25-02-02.21:58:59.983 [http-nio-8090-exec-2] INFO  connection             - Opened connection [connectionId{localValue:3, serverValue:9}] to localhost:27017
+25-02-02.22:02:00.698 [http-nio-8090-exec-3] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:02:00.704 [http-nio-8090-exec-6] INFO  ChatMessageHandler     - 用户 3 离开房间 2
+25-02-02.22:02:03.666 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:02:14.406 [http-nio-8090-exec-9] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:02:16.011 [http-nio-8090-exec-10] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:02:29.170 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 2 发送消息：1 ，接收者： 3，roomId： 2
+25-02-02.22:12:53.564 [http-nio-8090-exec-3] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:12:56.111 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:13:18.387 [http-nio-8090-exec-9] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:13:20.185 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:13:21.256 [http-nio-8090-exec-5] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:13:25.209 [http-nio-8090-exec-8] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:13:53.728 [http-nio-8090-exec-1] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:13:55.045 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:13:58.900 [http-nio-8090-exec-6] INFO  ChatMessageHandler     - 2 发送消息：1 ，接收者： 3，roomId： 2
+25-02-02.22:19:52.743 [SpringApplicationShutdownHook] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:19:59.200 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 13228 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-02-02.22:19:59.202 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-02-02.22:19:59.202 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-02-02.22:19:59.655 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-02-02.22:19:59.669 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+25-02-02.22:20:00.015 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-02-02.22:20:00.016 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-02-02.22:20:00.016 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-02-02.22:20:00.016 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-02-02.22:20:00.018 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-02-02.22:20:00.024 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-02-02.22:20:00.024 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-02-02.22:20:00.025 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-02-02.22:20:00.151 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-02-02.22:20:00.151 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 905 ms
+25-02-02.22:20:00.503 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@3b35798]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-02-02.22:20:00.509 [cluster-rtt-ClusterId{value='679f7f108a77ea11617baa6e', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:10}] to localhost:27017
+25-02-02.22:20:00.509 [cluster-ClusterId{value='679f7f108a77ea11617baa6e', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:11}] to localhost:27017
+25-02-02.22:20:00.509 [cluster-ClusterId{value='679f7f108a77ea11617baa6e', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15234400}
+25-02-02.22:20:00.993 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-02-02.22:20:01.007 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-02-02.22:20:01.014 [main            ] INFO  App                    - Started App in 2.197 seconds (JVM running for 3.405)
+25-02-02.22:30:56.157 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-02-02.22:30:56.157 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-02-02.22:30:56.158 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-02-02.22:32:27.618 [http-nio-8090-exec-3] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:32:34.389 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:33:03.206 [http-nio-8090-exec-8] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:33:09.276 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.22:33:09.304 [http-nio-8090-exec-9] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-02-02.22:33:09.497 [http-nio-8090-exec-9] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-02-02.22:33:09.566 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.22:33:09.882 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.22:33:10.912 [http-nio-8090-exec-10] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:35:11.504 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:35:11.521 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:36:19.802 [http-nio-8090-exec-8] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:36:38.374 [http-nio-8090-exec-6] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:36:40.147 [http-nio-8090-exec-1] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:36:40.148 [http-nio-8090-exec-10] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:36:48.004 [http-nio-8090-exec-3] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:36:48.004 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:37:22.889 [http-nio-8090-exec-5] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:37:22.889 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:37:33.950 [http-nio-8090-exec-9] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:37:34.365 [http-nio-8090-exec-8] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.22:37:34.372 [http-nio-8090-exec-8] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.22:37:34.597 [http-nio-8090-exec-7] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:37:34.613 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.22:37:34.624 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.22:37:37.362 [http-nio-8090-exec-10] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:38:34.071 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:38:35.659 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:38:37.112 [http-nio-8090-exec-8] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:38:39.545 [http-nio-8090-exec-6] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:38:45.850 [http-nio-8090-exec-10] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:38:48.108 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:41:50.843 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:41:52.715 [http-nio-8090-exec-7] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:41:54.809 [http-nio-8090-exec-6] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:41:54.809 [http-nio-8090-exec-1] INFO  ChatMessageHandler     - 用户 2 加入房间 undefined
+25-02-02.22:41:57.068 [http-nio-8090-exec-10] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:41:57.069 [http-nio-8090-exec-3] INFO  ChatMessageHandler     - 用户 2 离开房间 undefined
+25-02-02.22:42:00.824 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:42:01.279 [http-nio-8090-exec-5] INFO  UserController         - 收到获取用户信息请求，用户ID：2
+25-02-02.22:42:01.280 [http-nio-8090-exec-5] INFO  UserService            - 获取用户信息，用户ID：2
+25-02-02.22:42:01.495 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:42:01.512 [http-nio-8090-exec-9] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.22:42:01.530 [http-nio-8090-exec-7] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.22:42:02.111 [http-nio-8090-exec-8] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:42:28.813 [http-nio-8090-exec-1] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:42:29.817 [http-nio-8090-exec-10] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:42:32.051 [http-nio-8090-exec-3] INFO  ChatMessageHandler     - 发送者：2，接收者： 3，消息：1 ，roomId： 2
+25-02-02.22:42:32.095 [http-nio-8090-exec-3] INFO  connection             - Opened connection [connectionId{localValue:3, serverValue:12}] to localhost:27017
+25-02-02.22:42:50.336 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 发送者：2，接收者： 3，消息：2 ，roomId： 2
+25-02-02.22:42:59.325 [http-nio-8090-exec-5] INFO  ChatMessageHandler     - 发送者：2，接收者： 3，消息：哈哈
+ ，roomId： 2
+25-02-02.22:52:23.702 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:52:31.852 [http-nio-8090-exec-7] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:52:34.534 [http-nio-8090-exec-6] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:55:31.932 [http-nio-8090-exec-10] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:55:31.983 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:55:38.561 [http-nio-8090-exec-5] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:55:38.576 [http-nio-8090-exec-9] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:55:44.614 [http-nio-8090-exec-7] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:55:44.628 [http-nio-8090-exec-8] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.22:55:45.205 [http-nio-8090-exec-6] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.22:55:45.521 [http-nio-8090-exec-1] INFO  ConsultationController - 收到查询咨询记录列表请求，医生ID：2，用户ID：null，预约ID：null，咨询形式：null
+25-02-02.22:55:46.774 [http-nio-8090-exec-3] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:57:48.983 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:57:49.001 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:57:52.307 [http-nio-8090-exec-9] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:57:52.322 [http-nio-8090-exec-8] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:57:53.770 [http-nio-8090-exec-6] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:57:53.783 [http-nio-8090-exec-10] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:57:54.941 [http-nio-8090-exec-3] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:57:54.957 [http-nio-8090-exec-5] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:57:57.610 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:57:57.623 [http-nio-8090-exec-7] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.22:58:04.837 [http-nio-8090-exec-8] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.22:58:06.166 [http-nio-8090-exec-1] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.23:00:04.522 [http-nio-8090-exec-10] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.23:00:04.536 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.23:00:26.646 [http-nio-8090-exec-5] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.23:00:26.663 [http-nio-8090-exec-9] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.23:01:09.304 [SpringApplicationShutdownHook] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.23:01:09.314 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-02-02.23:01:09.324 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-02-02.23:01:16.008 [main            ] INFO  App                    - Starting App using Java 1.8.0_321 on LAPTOP-MV2KUHP1 with PID 2148 (F:\code\work\mental-health\management\target\classes started by Lenovo in F:\code\work\mental-health\management)
+25-02-02.23:01:16.010 [main            ] DEBUG App                    - Running with Spring Boot v2.7.12, Spring v5.3.27
+25-02-02.23:01:16.010 [main            ] INFO  App                    - The following 1 profile is active: "dev"
+25-02-02.23:01:16.480 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+25-02-02.23:01:16.494 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 MongoDB repository interfaces.
+25-02-02.23:01:16.846 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-02-02.23:01:16.847 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+25-02-02.23:01:16.847 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-02-02.23:01:16.847 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-02-02.23:01:16.850 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+25-02-02.23:01:16.855 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-02-02.23:01:16.856 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-02-02.23:01:16.856 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-02-02.23:01:16.981 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-02-02.23:01:16.981 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 921 ms
+25-02-02.23:01:17.345 [main            ] INFO  client                 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/1.8.0_321-b07"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@2dd63e3]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+25-02-02.23:01:17.350 [cluster-ClusterId{value='679f88bd46387e6276b60bca', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:2, serverValue:16}] to localhost:27017
+25-02-02.23:01:17.350 [cluster-rtt-ClusterId{value='679f88bd46387e6276b60bca', description='null'}-localhost:27017] INFO  connection             - Opened connection [connectionId{localValue:1, serverValue:17}] to localhost:27017
+25-02-02.23:01:17.350 [cluster-ClusterId{value='679f88bd46387e6276b60bca', description='null'}-localhost:27017] INFO  cluster                - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=14497300}
+25-02-02.23:01:17.835 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-02-02.23:01:17.849 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-02-02.23:01:17.856 [main            ] INFO  App                    - Started App in 2.224 seconds (JVM running for 3.419)
+25-02-02.23:01:25.436 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-02-02.23:01:25.436 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-02-02.23:01:25.437 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-02-02.23:01:26.240 [http-nio-8090-exec-1] INFO  connection             - Opened connection [connectionId{localValue:3, serverValue:18}] to localhost:27017
+25-02-02.23:01:26.367 [http-nio-8090-exec-3] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.23:01:44.992 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 发送者：2，接收者： 3，消息：你好
+ ，roomId： 2
+25-02-02.23:03:14.120 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.23:03:15.517 [http-nio-8090-exec-9] INFO  ChatMessageHandler     - 用户 2 加入房间 1
+25-02-02.23:03:20.279 [http-nio-8090-exec-7] INFO  ChatMessageHandler     - 用户 2 离开房间 1
+25-02-02.23:03:40.723 [http-nio-8090-exec-6] INFO  ChatMessageHandler     - 用户 2 加入房间 1
+25-02-02.23:03:42.108 [http-nio-8090-exec-10] INFO  ChatMessageHandler     - 用户 2 离开房间 1
+25-02-02.23:03:54.258 [http-nio-8090-exec-3] INFO  ChatMessageHandler     - 用户 2 加入房间 1
+25-02-02.23:03:59.158 [http-nio-8090-exec-2] INFO  ChatMessageHandler     - 发送者：2，接收者： 3，消息：hello
+ ，roomId： 1
+25-02-02.23:04:16.305 [http-nio-8090-exec-4] INFO  ChatMessageHandler     - 用户 2 离开房间 1
+25-02-02.23:04:17.612 [http-nio-8090-exec-9] INFO  ChatMessageHandler     - 用户 2 加入房间 2
+25-02-02.23:04:19.500 [http-nio-8090-exec-7] INFO  ChatMessageHandler     - 用户 2 离开房间 2
+25-02-02.23:04:20.874 [http-nio-8090-exec-6] INFO  ChatMessageHandler     - 用户 2 加入房间 1
+25-02-02.23:04:22.912 [http-nio-8090-exec-10] INFO  ChatMessageHandler     - 用户 2 离开房间 1

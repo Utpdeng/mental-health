@@ -1,0 +1,34 @@
+server:
+  port: 8090
+
+spring:
+  datasource:
+    username: root
+    password: 1230.0
+    url: jdbc:mysql://127.0.0.1:3306/mental-heal?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
+#    url: jdbc:mysql://172.24.54.8:3306/mental-heal?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/mental-heal
+#      uri: mongodb://172.24.54.8:27017/mental-heal
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/config/mybatis-config.xml
+
+jwt:
+  secret: abcdefghijklmnopqrstuvwxyz
+  expiration: 86400  # 24小时
+
+zhipu:
+  apiUrl: https://open.bigmodel.cn/api/paas/v4/chat/completions
+  apiKeySecret: 0e16e77453ab321e8cc46af3afcfc58a.7REJlHDMimEZ2Yiw
+
+# 日志
+logging:
+  level:
+    root: info
+    com.dil: debug
+    com.dil.user.mapper: debug
+  config: classpath:logback-spring.xml

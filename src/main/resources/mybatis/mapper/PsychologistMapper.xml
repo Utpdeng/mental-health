@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dil.psychologist.mapper.PsychologistMapper">
+
+    <select id="getPsychologists" resultType="com.dil.psychologist.dto.PsychologistListResponse">
+        SELECT 
+            p.id as psychologistId,
+            p.user_id as userId,
+            u.username,
+            up.nickname,
+            up.avatar_url as avatarUrl,
+            p.title,
+            p.specialty,
+            p.introduction,
+            p.work_years as workYears,
+            p.consultation_fee as consultationFee,
+            p.employment_status as employmentStatus,
+            up.gender,
+            up.location,
+            p.max_appointments_per_day as maxAppointmentsPerDay
+        FROM psychologists p
+        JOIN users u ON p.user_id = u.id
+        LEFT JOIN user_profiles up ON u.id = up.user_id
+        WHERE 1=1
+        <if test="employmentStatus != null">
+            AND p.employment_status = #{employmentStatus}
+        </if>
+        AND p.deleted_at IS NULL
+        AND u.status = 'active'
+        ORDER BY p.created_at DESC
+    </select>
+
+    <select id="getPsychologistDetail" resultType="com.dil.psychologist.dto.PsychologistDetailResponse">
+        SELECT
+            p.id as psychologistId,
+            p.user_id as userId,
+            u.username,
+            up.nickname,
+            up.avatar_url as avatarUrl,
+            u.email,
+            u.phone,
+            p.title,
+            p.specialty,
+            p.introduction,
+            p.qualification,
+            p.work_years as workYears,
+            p.consultation_fee as consultationFee,
+            p.employment_status as employmentStatus,
+            p.employment_date as employmentDate,
+            p.resignation_date as resignationDate,
+            p.leave_start_date as leaveStartDate,
+            p.leave_end_date as leaveEndDate,
+            p.leave_reason as leaveReason,
+            p.max_appointments_per_day as maxAppointmentsPerDay,
+            up.gender,
+            up.birthdate,
+            up.location,
+            up.preferences,
+            p.created_at as createdAt,
+            p.updated_at as updatedAt
+        FROM psychologists p
+        JOIN users u ON p.user_id = u.id
+        LEFT JOIN user_profiles up ON u.id = up.user_id
+        WHERE p.id = #{psychologistId}
+        AND p.deleted_at IS NULL
+        AND u.status = 'active'
+    </select>
+
+    <!-- 更新心理医生信息 -->
+    <update id="updatePsychologist" parameterType="com.dil.psychologist.dto.UpdatePsychologistRequest">
+        UPDATE psychologists
+        <set>
+            <if test="title != null">
+                title = #{title},
+            </if>
+            <if test="specialty != null">
+                specialty = #{specialty},
+            </if>
+            <if test="introduction != null">
+                introduction = #{introduction},
+            </if>
+            <if test="qualification != null">
+                qualification = #{qualification},
+            </if>
+            <if test="workYears != null">
+                work_years = #{workYears},
+            </if>
+            <if test="consultationFee != null">
+                consultation_fee = #{consultationFee},
+            </if>
+            <if test="employmentStatus != null">
+                employment_status = #{employmentStatus},
+            </if>
+            <if test="employmentDate != null">
+                employment_date = #{employmentDate},
+            </if>
+            <if test="resignationDate != null">
+                resignation_date = #{resignationDate},
+            </if>
+            <if test="leaveStartDate != null">
+                leave_start_date = #{leaveStartDate},
+            </if>
+            <if test="leaveEndDate != null">
+                leave_end_date = #{leaveEndDate},
+            </if>
+            <if test="leaveReason != null">
+                leave_reason = #{leaveReason},
+            </if>
+            <if test="maxAppointmentsPerDay != null">
+                max_appointments_per_day = #{maxAppointmentsPerDay},
+            </if>
+            updated_at = NOW()
+        </set>
+        WHERE id = #{psychologistId}
+        AND deleted_at IS NULL
+    </update>
+
+    <!-- 软删除心理医生 -->
+    <update id="deletePsychologist">
+        UPDATE psychologists
+        SET deleted_at = NOW(),
+            updated_at = NOW()
+        WHERE id = #{psychologistId}
+        AND deleted_at IS NULL
+    </update>
+</mapper>

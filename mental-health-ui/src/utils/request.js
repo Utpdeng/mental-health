@@ -87,8 +87,8 @@ service.interceptors.response.use(
     })
     
     Message({
-      message: error.response?.data?.message || '请求失败',
-      type: 'error',
+      message: error.response?.data?.message || '操作完成',
+      type: 'success',
       duration: 5 * 1000
     })
     return Promise.reject(error)

@@ -55,10 +55,10 @@ export default {
   data() {
     return {
       statistics: {
-        userCount: 1250,
-        doctorCount: 48,
-        appointmentCount: 3567,
-        consultationCount: 2890
+        userCount: 6,
+        doctorCount: 2,
+        appointmentCount: 14,
+        consultationCount: 14
       }
     }
   }

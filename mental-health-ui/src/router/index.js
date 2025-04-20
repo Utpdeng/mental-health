@@ -139,7 +139,21 @@ const routes = [
         name: 'AdminProfile',
         component: () => import('@/views/admin/profile/index.vue'),
         meta: { title: '个人中心' }
-      } 
+      },
+      {
+        path: 'content',
+        name: 'Content',
+        component: () => import('@/views/admin/content/index'),
+        meta: { title: '内容管理', icon: 'el-icon-folder' },
+        children: [
+          {
+            path: 'tests',
+            name: 'AdminTests',
+            component: () => import('@/views/admin/content/tests/index'),
+            meta: { title: '测评审核', icon: 'el-icon-document-checked' }
+          }
+        ]
+      }
     ]
   },
   {
@@ -209,8 +223,8 @@ const routes = [
       {
         path: 'tests',
         name: 'DoctorTests',
-        component: () => import('@/views/doctor/tests/index.vue'),
-        meta: { title: '心理测试' }
+        component: () => import('@/views/doctor/tests/index'),
+        meta: { title: '测评管理', icon: 'el-icon-document' }
       },
       {
         path: 'profile',
